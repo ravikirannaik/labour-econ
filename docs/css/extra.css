@@ -1,0 +1,184 @@
+/* ============================================================
+   Labour Economics — ECON207
+   Custom CSS — FLAME Red primary, FLAME Blue accent
+   ============================================================ */
+
+/* ---------- FLAME Colour Variables ---------- */
+
+:root {
+  --md-primary-fg-color: #F01928;
+  --md-primary-fg-color--light: #F56B76;
+  --md-primary-fg-color--dark: #C01420;
+  --md-accent-fg-color: #0000DC;
+  --md-accent-fg-color--transparent: rgba(0, 0, 220, 0.1);
+  --flame-red: #F01928;
+  --flame-blue: #0000DC;
+  --flame-blue-deep: #08116F;
+  --flame-orange: #F58817;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #F56B76;
+  --md-primary-fg-color--light: #F89DA5;
+  --md-primary-fg-color--dark: #F01928;
+  --md-accent-fg-color: #6B6BFF;
+  --md-accent-fg-color--transparent: rgba(107, 107, 255, 0.15);
+}
+
+/* ---------- Headings ---------- */
+
+.md-typeset h1,
+.md-typeset h2 {
+  color: var(--flame-red);
+}
+
+.md-typeset h3 {
+  color: var(--flame-blue-deep);
+}
+
+/* ---------- Custom Admonitions ---------- */
+
+/* Model — FLAME Blue */
+.md-typeset .admonition.model,
+.md-typeset details.model {
+  border-color: var(--flame-blue);
+}
+.md-typeset .model > .admonition-title,
+.md-typeset .model > summary {
+  background-color: rgba(0, 0, 220, 0.1);
+  border-color: var(--flame-blue);
+}
+.md-typeset .model > .admonition-title::before,
+.md-typeset .model > summary::before {
+  background-color: var(--flame-blue);
+  -webkit-mask-image: var(--md-admonition-icon--example);
+  mask-image: var(--md-admonition-icon--example);
+}
+
+/* Empirical — Teal */
+.md-typeset .admonition.empirical,
+.md-typeset details.empirical {
+  border-color: #009688;
+}
+.md-typeset .empirical > .admonition-title,
+.md-typeset .empirical > summary {
+  background-color: rgba(0, 150, 136, 0.1);
+  border-color: #009688;
+}
+.md-typeset .empirical > .admonition-title::before,
+.md-typeset .empirical > summary::before {
+  background-color: #009688;
+  -webkit-mask-image: var(--md-admonition-icon--info);
+  mask-image: var(--md-admonition-icon--info);
+}
+
+/* Indian Context — FLAME Red */
+.md-typeset .admonition.indian,
+.md-typeset details.indian {
+  border-color: var(--flame-red);
+}
+.md-typeset .indian > .admonition-title,
+.md-typeset .indian > summary {
+  background-color: rgba(240, 25, 40, 0.08);
+  border-color: var(--flame-red);
+}
+.md-typeset .indian > .admonition-title::before,
+.md-typeset .indian > summary::before {
+  background-color: var(--flame-red);
+  -webkit-mask-image: var(--md-admonition-icon--tip);
+  mask-image: var(--md-admonition-icon--tip);
+}
+
+/* Stata — Dark Gray */
+.md-typeset .admonition.stata,
+.md-typeset details.stata {
+  border-color: #37474f;
+}
+.md-typeset .stata > .admonition-title,
+.md-typeset .stata > summary {
+  background-color: rgba(55, 71, 79, 0.1);
+  border-color: #37474f;
+}
+.md-typeset .stata > .admonition-title::before,
+.md-typeset .stata > summary::before {
+  background-color: #37474f;
+  -webkit-mask-image: var(--md-admonition-icon--quote);
+  mask-image: var(--md-admonition-icon--quote);
+}
+
+/* Policy — Orange */
+.md-typeset .admonition.policy,
+.md-typeset details.policy {
+  border-color: var(--flame-orange);
+}
+.md-typeset .policy > .admonition-title,
+.md-typeset .policy > summary {
+  background-color: rgba(245, 136, 23, 0.1);
+  border-color: var(--flame-orange);
+}
+.md-typeset .policy > .admonition-title::before,
+.md-typeset .policy > summary::before {
+  background-color: var(--flame-orange);
+  -webkit-mask-image: var(--md-admonition-icon--warning);
+  mask-image: var(--md-admonition-icon--warning);
+}
+
+/* ---------- Chapter Cards ---------- */
+
+.chapter-card {
+  border-left: 4px solid var(--flame-red);
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+  background: var(--md-code-bg-color);
+  border-radius: 0 8px 8px 0;
+}
+
+.chapter-card h3 {
+  margin-top: 0;
+  color: var(--flame-blue-deep);
+}
+
+.chapter-tag {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 0.3rem;
+}
+
+.hours-tag {
+  background: rgba(0, 0, 220, 0.1);
+  color: var(--flame-blue);
+}
+
+.borjas-tag {
+  background: rgba(240, 25, 40, 0.1);
+  color: var(--flame-red);
+}
+
+/* ---------- Quiz / Practice: Upper-alpha lists ---------- */
+
+.upper-alpha > ol {
+  list-style-type: upper-alpha;
+}
+
+/* ---------- iframes (for embedded slides) ---------- */
+
+.md-typeset iframe {
+  width: 100%;
+  border: 2px solid var(--flame-red);
+  border-radius: 8px;
+}
+
+/* ---------- Tables ---------- */
+
+.md-typeset table:not([class]) th {
+  background-color: var(--flame-red);
+  color: white;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background-color: rgba(240, 25, 40, 0.25);
+  color: var(--md-default-fg-color);
+}

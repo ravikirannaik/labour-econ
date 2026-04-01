@@ -1,0 +1,132 @@
+site_name: "Labour Economics — ECON207"
+site_description: "Course companion site for ECON207 Labour Economics at FLAME University"
+site_author: "Ravikiran Naik"
+site_url: "https://ravikirannaik.github.io/labour-econ/"
+
+theme:
+  name: material
+  language: en
+  font:
+    text: PT Sans
+    code: Roboto Mono
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.sections
+    - navigation.tracking
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+    - toc.integrate
+  icon:
+    logo: material/briefcase-outline
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - def_list
+  - attr_list
+  - md_in_html
+  - meta
+  - tables
+  - toc:
+      permalink: true
+
+extra_css:
+  - css/extra.css
+
+extra_javascript:
+  - js/extra.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ravikirannaik
+    - icon: fontawesome/solid/globe
+      link: https://ravikirannaik.github.io/
+
+nav:
+  - Home: index.md
+  - Syllabus: syllabus.md
+  - How to Use: how-to-use.md
+  - Chapters:
+      - Overview: chapters/index.md
+      - "1. Introduction":
+          - Content: chapters/01-introduction/index.md
+          - Practice: chapters/01-introduction/practice.md
+          - Resources: chapters/01-introduction/resources.md
+      - "2. Labor Supply":
+          - Content: chapters/02-labor-supply/index.md
+          - Practice: chapters/02-labor-supply/practice.md
+          - Resources: chapters/02-labor-supply/resources.md
+      - "3. Labor Demand":
+          - Content: chapters/03-labor-demand/index.md
+          - Practice: chapters/03-labor-demand/practice.md
+          - Resources: chapters/03-labor-demand/resources.md
+      - "4. Equilibrium":
+          - Content: chapters/04-equilibrium/index.md
+          - Practice: chapters/04-equilibrium/practice.md
+          - Resources: chapters/04-equilibrium/resources.md
+      - "5. Compensating Differentials":
+          - Content: chapters/05-compensating-differentials/index.md
+          - Practice: chapters/05-compensating-differentials/practice.md
+          - Resources: chapters/05-compensating-differentials/resources.md
+      - "6. Education":
+          - Content: chapters/06-education/index.md
+          - Practice: chapters/06-education/practice.md
+          - Resources: chapters/06-education/resources.md
+      - "7. Wage Distribution":
+          - Content: chapters/07-wage-distribution/index.md
+          - Practice: chapters/07-wage-distribution/practice.md
+          - Resources: chapters/07-wage-distribution/resources.md
+      - "8. Mobility":
+          - Content: chapters/08-mobility/index.md
+          - Practice: chapters/08-mobility/practice.md
+          - Resources: chapters/08-mobility/resources.md
+      - "9. Discrimination":
+          - Content: chapters/09-discrimination/index.md
+          - Practice: chapters/09-discrimination/practice.md
+          - Resources: chapters/09-discrimination/resources.md
+      - "10. Incentive Pay":
+          - Content: chapters/10-incentive-pay/index.md
+          - Practice: chapters/10-incentive-pay/practice.md
+          - Resources: chapters/10-incentive-pay/resources.md
+      - "11. Unemployment":
+          - Content: chapters/11-unemployment/index.md
+          - Practice: chapters/11-unemployment/practice.md
+          - Resources: chapters/11-unemployment/resources.md
+  - Indian Context:
+      - Overview: indian-context/index.md
+      - "PLFS Data Guide": indian-context/plfs-overview.md
+      - "Informal Economy": indian-context/informal-economy.md
+      - "Gender & LFPR": indian-context/gender-lfpr.md
+      - "Caste & Discrimination": indian-context/caste-discrimination.md
+      - "NREGA": indian-context/nrega.md
+      - "Migration": indian-context/migration.md
+  - Stata: stata/index.md
+  - Glossary: glossary.md
+  - References: references.md
+  - Acknowledgements: acknowledgements.md
+  - License: license.md
