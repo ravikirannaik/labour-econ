@@ -6,9 +6,55 @@ title: "Labor Market Equilibrium"
 
 <span class="chapter-tag hours-tag">3 Hours</span> <span class="chapter-tag borjas-tag">Borjas Ch. 4</span>
 
-Chapters 2 and 3 built the two blades of Alfred Marshall's scissors: labour supply (workers choosing how much to work) and labour demand (firms choosing how many workers to hire). This chapter brings the blades together. **Equilibrium** occurs where supply equals demand, determining the market wage and employment level simultaneously. But the real analytical power of the equilibrium framework lies in what happens when policy intervenes---through taxes, immigration, or mandated benefits---and in understanding how markets adjust over time.
+## Lecture Slides
+
+<iframe src="../../slides/ch4-equilibrium.html" style="height: 600px;" allowfullscreen></iframe>
+
+*Click on the slides, then use arrow keys to navigate · Use the fullscreen button for a larger view*
 
 ---
+
+<div class="socrative-box">
+<a href="https://b.socrative.com/login/student/" target="_blank" class="socrative-btn">Join Quiz on Socrative</a>
+</div>
+
+---
+
+<details class="chapter-reading" markdown>
+<summary>Concept Map</summary>
+
+```mermaid
+mindmap
+  root((Equilibrium))
+    Supply = Demand
+      Wage w* and Employment L*
+      Worker & Producer Surplus
+    Efficiency
+      Total surplus maximised
+      Deadweight loss from intervention
+    Cobweb Model
+      Lagged supply response
+      Stable vs unstable cycles
+    Payroll Taxes
+      Statutory vs economic incidence
+      Elasticity determines burden
+      Inelastic supply bears more
+    Immigration
+      Immigration surplus
+      Card 1990: Mariel Boatlift
+      Borjas: redistribution
+    Mandated Benefits
+      Worker valuation b vs cost c
+      Gruber 1994: maternity
+      Efficiency when b = c
+```
+
+</details>
+
+<details class="chapter-reading" markdown>
+<summary>Chapter Reading Material</summary>
+
+Chapters 2 and 3 built the two blades of Alfred Marshall's scissors: labour supply (workers choosing how much to work) and labour demand (firms choosing how many workers to hire). This chapter brings the blades together. **Equilibrium** occurs where supply equals demand, determining the market wage and employment level simultaneously. But the real analytical power of the equilibrium framework lies in what happens when policy intervenes---through taxes, immigration, or mandated benefits---and in understanding how markets adjust over time.
 
 ## Equilibrium in a Single Competitive Labour Market
 
@@ -196,9 +242,11 @@ A unifying theme across all three policy applications is the concept of **deadwe
 4. Mandated benefits are less costly than equivalent taxes when workers value the benefits. If \(b = c\), the mandate is fully efficient; if \(b < c\), it generates deadweight loss.
 5. The cobweb model explains why labour markets with training lags can exhibit cyclical patterns of shortage and surplus.
 
+</details>
+
 ---
 
-<div style="display: flex; justify-content: space-between; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--md-default-fg-color--lightest);">
-<span>[:octicons-arrow-left-24: Ch. 3: Labor Demand](../03-labor-demand/index.md)</span>
-<span>[Ch. 5: Compensating Wage Differentials :octicons-arrow-right-24:](../05-compensating-differentials/index.md)</span>
+<div style="display: flex; justify-content: space-between; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--md-default-fg-color--lightest);" markdown>
+<span markdown>[:octicons-arrow-left-24: Ch. 3: Labor Demand](../03-labor-demand/index.md)</span>
+<span markdown>[Ch. 5: Compensating Wage Differentials :octicons-arrow-right-24:](../05-compensating-differentials/index.md)</span>
 </div>

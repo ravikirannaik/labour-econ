@@ -5,14 +5,70 @@ description: "Human capital theory, the Mincer earnings equation, ability bias a
 
 # 6. Education
 
+<span class="chapter-tag borjas-tag">Borjas Ch. 6</span>
+
+## Lecture Slides
+
+<iframe src="../../slides/ch6-education.html" style="height: 600px;" allowfullscreen></iframe>
+
+*Click on the slides, then use arrow keys to navigate · Use the fullscreen button for a larger view*
+
+---
+
+<div class="socrative-box">
+<a href="https://b.socrative.com/login/student/" target="_blank" class="socrative-btn">Join Quiz on Socrative</a>
+</div>
+
+---
+
+<details class="chapter-reading" markdown>
+<summary>Concept Map</summary>
+
+```mermaid
+mindmap
+  root((Education))
+    Human Capital Investment
+      Becker 1964
+      Direct + opportunity costs
+      Present value framework
+      Stopping rule: MRR = r
+    Mincer Equation
+      ln w = alpha + beta s + gamma x
+      Return: 6-12% per year
+      Concave age-earnings profile
+    Ability Bias
+      OLS overstates causal return
+      Twins studies
+      IV: compulsory schooling
+      Regression discontinuity
+    Signalling
+      Spence 1973
+      Sheepskin effect
+      Human capital vs sorting
+    Training
+      General: worker pays
+      Specific: costs shared
+      Ben-Porath lifecycle model
+    College Wage Premium
+      Doubled since 1980 in US
+      Goldin & Katz: race metaphor
+    Policy
+      Credit constraints
+      Subsidies vs credentials
+      Vocational pathways
+```
+
+</details>
+
+<details class="chapter-reading" markdown>
+<summary>Chapter Reading Material</summary>
+
 > *"The most valuable of all capital is that invested in human beings."*
 > --- Alfred Marshall, *Principles of Economics* (1890).
 
 Why do workers with more education earn higher wages? Is it because schooling makes them more productive, or because a degree signals pre-existing ability to employers? This chapter develops the human capital model of education as an investment, derives the Mincer earnings equation, confronts the identification challenge of ability bias, and contrasts the human capital and signalling interpretations of the education-wage relationship. We then turn to firm-level training decisions --- who pays for general versus specific training --- and the age-earnings profiles that on-the-job training generates. Finally, we examine the dramatic rise in the college wage premium and what it means for India's expanding but quality-challenged higher education system.
 
 Education is the single most studied topic in labour economics. Getting the answer right matters enormously --- for individuals deciding how long to stay in school, for governments allocating education budgets, and for understanding the sources of wage inequality.
-
----
 
 ## Education as an Investment: The Becker Model
 
@@ -457,9 +513,11 @@ The **college wage premium** --- the percentage by which college graduates' wage
 
 8. In **India**, returns to education are high but vary enormously by gender, caste, sector, and institution quality. Despite massive enrolment gains, learning outcomes remain weak and skill mismatch is pervasive --- highlighting the distinction between years of schooling and actual human capital acquisition.
 
+</details>
+
 ---
 
-<div style="display: flex; justify-content: space-between; margin-top: 2rem;">
-<a href="../05-compensating-differentials/">:material-arrow-left: Ch 5: Compensating Differentials</a>
-<a href="../07-wage-distribution/">Ch 7: The Wage Distribution :material-arrow-right:</a>
+<div style="display: flex; justify-content: space-between; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--md-default-fg-color--lightest);" markdown>
+<span markdown>[:octicons-arrow-left-24: Ch. 5: Compensating Differentials](../05-compensating-differentials/index.md)</span>
+<span markdown>[Ch. 7: The Wage Distribution :octicons-arrow-right-24:](../07-wage-distribution/index.md)</span>
 </div>

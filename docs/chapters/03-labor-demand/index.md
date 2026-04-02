@@ -6,9 +6,51 @@ title: "Labor Demand"
 
 <span class="chapter-tag hours-tag">5 Hours</span> <span class="chapter-tag borjas-tag">Borjas Ch. 3</span>
 
-In the previous chapter we asked: *How do workers decide whether and how much to work?* Now we flip the question: **How do firms decide how many workers to hire?** The theory of labour demand is, at its core, a theory of the firm. A profit-maximizing employer will keep hiring workers as long as each additional worker adds more to revenue than to cost. This simple insight---the marginal productivity condition---is the foundation of everything in this chapter.
+## Lecture Slides
+
+<iframe src="../../slides/ch3-demand.html" style="height: 600px;" allowfullscreen></iframe>
+
+*Click on the slides, then use arrow keys to navigate · Use the fullscreen button for a larger view*
 
 ---
+
+<div class="socrative-box">
+<a href="https://b.socrative.com/login/student/" target="_blank" class="socrative-btn">Join Quiz on Socrative</a>
+</div>
+
+---
+
+<details class="chapter-reading" markdown>
+<summary>Concept Map</summary>
+
+```mermaid
+mindmap
+  root((Labor Demand))
+    Production Function
+      Marginal Product of Labour
+      Diminishing Returns
+    Short-Run Demand
+      VMP = w hiring rule
+      Downward-sloping demand curve
+    Long-Run Demand
+      Isoquants & Isocosts
+      MRTS = w/r
+      Substitution Effect
+      Scale Effect
+    Elasticity of Demand
+      Marshall's Four Rules
+      Hamermesh estimate: −0.30
+    Minimum Wage
+      Card & Krueger 1994
+      Employment effects debate
+```
+
+</details>
+
+<details class="chapter-reading" markdown>
+<summary>Chapter Reading Material</summary>
+
+In the previous chapter we asked: *How do workers decide whether and how much to work?* Now we flip the question: **How do firms decide how many workers to hire?** The theory of labour demand is, at its core, a theory of the firm. A profit-maximizing employer will keep hiring workers as long as each additional worker adds more to revenue than to cost. This simple insight---the marginal productivity condition---is the foundation of everything in this chapter.
 
 ## The Firm's Production Function
 
@@ -218,9 +260,11 @@ The theory developed above yields a clear prediction: a binding minimum wage (se
 4. Marshall's four rules identify when labour demand is more elastic: high substitutability, elastic product demand, large labour cost share, and elastic supply of other inputs.
 5. The minimum wage debate illustrates that theory and evidence must work together: while the competitive model predicts employment losses, empirical evidence suggests these are small for moderate minimum wage increases.
 
+</details>
+
 ---
 
-<div style="display: flex; justify-content: space-between; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--md-default-fg-color--lightest);">
-<span>[:octicons-arrow-left-24: Ch. 2: Labor Supply](../02-labor-supply/index.md)</span>
-<span>[Ch. 4: Labor Market Equilibrium :octicons-arrow-right-24:](../04-equilibrium/index.md)</span>
+<div style="display: flex; justify-content: space-between; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--md-default-fg-color--lightest);" markdown>
+<span markdown>[:octicons-arrow-left-24: Ch. 2: Labor Supply](../02-labor-supply/index.md)</span>
+<span markdown>[Ch. 4: Labor Market Equilibrium :octicons-arrow-right-24:](../04-equilibrium/index.md)</span>
 </div>

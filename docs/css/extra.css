@@ -171,6 +171,80 @@
   border-radius: 8px;
 }
 
+/* ---------- Chapter Reading (collapsible) ---------- */
+
+.chapter-reading {
+  border: 2px solid var(--flame-blue);
+  border-radius: 8px;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.chapter-reading > summary {
+  cursor: pointer;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--flame-blue-deep);
+  background: rgba(0, 0, 220, 0.06);
+  border-radius: 6px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chapter-reading > summary::-webkit-details-marker {
+  display: none;
+}
+
+.chapter-reading > summary::before {
+  content: "▶";
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.chapter-reading[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.chapter-reading[open] > summary {
+  border-bottom: 1px solid rgba(0, 0, 220, 0.15);
+  border-radius: 6px 6px 0 0;
+}
+
+.chapter-reading > *:not(summary) {
+  padding: 0 1.2rem;
+}
+
+/* ---------- Socrative Quiz Buttons ---------- */
+
+.socrative-box {
+  border: 2px solid var(--flame-red);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+  background: rgba(240, 25, 40, 0.04);
+  text-align: center;
+}
+
+.socrative-box a.socrative-btn {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  background: var(--flame-red);
+  color: white !important;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.socrative-box a.socrative-btn:hover {
+  background: #c01420;
+  transform: translateY(-1px);
+}
+
 /* ---------- Tables ---------- */
 
 .md-typeset table:not([class]) th {

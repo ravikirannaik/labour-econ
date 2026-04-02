@@ -4,14 +4,61 @@ title: "Compensating Wage Differentials"
 
 # 5. Compensating Wage Differentials
 
+<span class="chapter-tag hours-tag">Borjas Ch. 5</span>
+
+## Lecture Slides
+
+<iframe src="../../slides/ch5-cwd.html" style="height: 600px;" allowfullscreen></iframe>
+
+*Click on the slides, then use arrow keys to navigate · Use the fullscreen button for a larger view*
+
+---
+
+<div class="socrative-box">
+<a href="https://b.socrative.com/login/student/" target="_blank" class="socrative-btn">Join Quiz on Socrative</a>
+</div>
+
+---
+
+<details class="chapter-reading" markdown>
+<summary>Concept Map</summary>
+
+```mermaid
+mindmap
+  root((Compensating Differentials))
+    Adam Smith's Insight
+      Five sources of wage variation
+      Unpleasant jobs pay more
+    Hedonic Wage Model
+      Rosen 1974
+      Wage as function of job attributes
+    Worker Side
+      Indifference curves
+      Reservation price of risk
+      Heterogeneous risk aversion
+    Firm Side
+      Isoprofit curves
+      Cost of providing safety
+    Market Equilibrium
+      Matching: tangency condition
+      Envelope of all matches
+    Value of Statistical Life
+      VSL = delta w / delta rho
+      US: ~$7 million
+      Cross-country: proportional to income
+```
+
+</details>
+
+<details class="chapter-reading" markdown>
+<summary>Chapter Reading Material</summary>
+
 > *"The whole of the advantages and disadvantages of the different employments of labour ... must, in the same neighbourhood, be either perfectly equal, or continually tending to equality."*
 > --- Adam Smith, *The Wealth of Nations* (1776), Book I, Chapter X.
 
 Why do wages differ across jobs even when workers appear to have similar skills? A coal miner and an office clerk with the same education may earn very different wages --- not because one is more productive than the other, but because their jobs differ in how pleasant, safe, or convenient they are. The theory of **compensating wage differentials** explains how wage differences arise to compensate workers for non-wage characteristics of jobs.
 
 This chapter introduces the hedonic wage model, derives the market equilibrium that determines compensating differentials, and applies the framework to estimate the value workers place on their own lives.
-
----
 
 ## Adam Smith's Original Insight
 
@@ -218,9 +265,11 @@ The hedonic framework applies to any job characteristic that workers value:
 
 6. In **India**, hazardous occupations in mining, construction, and manual scavenging often pay low wages, contradicting the theory. This reflects labour market segmentation, caste-based occupational sorting, informality, and weak enforcement of safety regulation.
 
+</details>
+
 ---
 
-<div style="display: flex; justify-content: space-between; margin-top: 2rem;">
-<a href="../04-equilibrium/">:material-arrow-left: Ch 4: Labor Market Equilibrium</a>
-<a href="../06-education/">Ch 6: Education :material-arrow-right:</a>
+<div style="display: flex; justify-content: space-between; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--md-default-fg-color--lightest);" markdown>
+<span markdown>[:octicons-arrow-left-24: Ch. 4: Labor Market Equilibrium](../04-equilibrium/index.md)</span>
+<span markdown>[Ch. 6: Education :octicons-arrow-right-24:](../06-education/index.md)</span>
 </div>
