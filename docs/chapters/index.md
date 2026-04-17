@@ -15,15 +15,6 @@ This course covers selected chapters from George J. Borjas's *Labor Economics* (
 ---
 
 <div class="chapter-card" markdown>
-### Chapter 1: Introduction to Labour Economics
-<span class="chapter-tag hours-tag">2 Hours</span> <span class="chapter-tag borjas-tag">Borjas Ch. 1</span>
-
-What is labour economics and why does it matter? Overview of the field, key labour market facts, and the economic methodology used throughout the course.
-
-[:octicons-arrow-right-24: Go to Chapter](01-introduction/index.md)
-</div>
-
-<div class="chapter-card" markdown>
 ### Chapter 2: Labor Supply
 <span class="chapter-tag hours-tag">5 Hours</span> <span class="chapter-tag borjas-tag">Borjas Ch. 2</span>
 
@@ -70,4 +61,4 @@ Why does unemployment persist even in a growing economy? Frictional, structural,
 
 ---
 
-*Chapter 1 introduces the field. Chapter 2 provides the core supply framework. Chapters 5–6 apply economic reasoning to wages and education. Chapter 9 examines discrimination. Chapter 12 covers unemployment and job search.*
+*Chapter 2 provides the core supply framework. Chapters 5–6 apply economic reasoning to wages and education. Chapter 9 examines discrimination. Chapter 12 covers unemployment and job search.*

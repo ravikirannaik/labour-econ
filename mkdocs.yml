@@ -77,7 +77,6 @@ nav:
   - How to Use: how-to-use.md
   - Chapters:
       - Overview: chapters/index.md
-      - "1. Introduction": chapters/01-introduction/index.md
       - "2. Labor Supply": chapters/02-labor-supply/index.md
       - "5. Compensating Differentials": chapters/05-compensating-differentials/index.md
       - "6. Education": chapters/06-education/index.md
