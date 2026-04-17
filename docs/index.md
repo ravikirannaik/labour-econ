@@ -20,15 +20,6 @@ Throughout the semester, we anchor the textbook material in the Indian labour ma
 ## Chapters
 
 <div class="chapter-card" markdown>
-### Chapter 1: Introduction
-<span class="chapter-tag hours-tag">2 Hours</span> <span class="chapter-tag borjas-tag">Borjas Ch. 1</span>
-
-An overview of how economists study labour markets — what makes them different from commodity markets, key facts about earnings and employment, and the tools we will use throughout the course.
-
-[:octicons-arrow-right-24: Start Chapter 1](chapters/01-introduction/index.md)
-</div>
-
-<div class="chapter-card" markdown>
 ### Chapter 2: Labor Supply
 <span class="chapter-tag hours-tag">5 Hours</span> <span class="chapter-tag borjas-tag">Borjas Ch. 2</span>
 
@@ -90,7 +81,7 @@ Types of unemployment, search theory and the reservation wage, the design of une
 
 1. Read the [Syllabus](syllabus.md) for course structure and assessment details
 2. Check [How to Use This Site](how-to-use.md) for navigation tips
-3. Start with [Chapter 1: Introduction](chapters/01-introduction/index.md)
+3. Start with [Chapter 2: Labor Supply](chapters/02-labor-supply/index.md)
 4. Use the [Glossary](glossary.md) for quick term lookups
 
 ---
