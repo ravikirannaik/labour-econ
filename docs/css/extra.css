@@ -275,6 +275,25 @@
   mask-image: var(--md-admonition-icon--question);
 }
 
+/* ---------- Exam Format Tab Highlight ---------- */
+
+.md-tabs__link[href="./exam-format/"],
+.md-tabs__link[href="../exam-format/"],
+.md-tabs__link[href="exam-format/"] {
+  background: var(--flame-orange) !important;
+  color: white !important;
+  border-radius: 4px;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+}
+
+.md-nav__link[href="exam-format/"],
+.md-nav__link[href="./exam-format/"],
+.md-nav__link[href="../exam-format/"] {
+  color: var(--flame-orange) !important;
+  font-weight: 700;
+}
+
 /* ---------- Slide Placeholder ---------- */
 
 .slide-placeholder {
