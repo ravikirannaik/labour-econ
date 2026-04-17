@@ -256,3 +256,76 @@
   background-color: rgba(240, 25, 40, 0.25);
   color: var(--md-default-fg-color);
 }
+
+/* ---------- Quiz Admonition — Purple ---------- */
+
+.md-typeset .admonition.quiz,
+.md-typeset details.quiz {
+  border-color: #7B1FA2;
+}
+.md-typeset .quiz > .admonition-title,
+.md-typeset .quiz > summary {
+  background-color: rgba(123, 31, 162, 0.1);
+  border-color: #7B1FA2;
+}
+.md-typeset .quiz > .admonition-title::before,
+.md-typeset .quiz > summary::before {
+  background-color: #7B1FA2;
+  -webkit-mask-image: var(--md-admonition-icon--question);
+  mask-image: var(--md-admonition-icon--question);
+}
+
+/* ---------- Slide Placeholder ---------- */
+
+.slide-placeholder {
+  border: 2px dashed var(--flame-blue);
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background: rgba(0, 0, 220, 0.04);
+  color: var(--flame-blue-deep);
+  margin: 1rem 0;
+}
+
+.slide-placeholder .placeholder-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.slide-placeholder p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+/* ---------- Concept Map Container ---------- */
+
+.concept-map {
+  border: 2px solid var(--flame-blue);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  background: rgba(0, 0, 220, 0.02);
+}
+
+.concept-map .mermaid {
+  text-align: center;
+}
+
+/* ---------- Self-check Quiz Cards ---------- */
+
+.quiz-section details.quiz {
+  margin-bottom: 1rem;
+}
+
+.quiz-section .upper-alpha ol {
+  list-style-type: upper-alpha;
+}
+
+.quiz-intro {
+  background: rgba(123, 31, 162, 0.06);
+  border-left: 4px solid #7B1FA2;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+}

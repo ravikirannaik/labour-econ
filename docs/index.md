@@ -11,13 +11,13 @@ description: "Course companion site for ECON207 Labour Economics at FLAME Univer
 
 Labour economics sits at the intersection of microeconomic theory and the lived realities of work, wages, and welfare. This course examines how workers decide whether and how much to work, how firms determine whom to hire and what to pay, and how the interaction of these decisions in labour markets shapes earnings, employment, and inequality. Building on the microeconomic foundations laid in ECON 201 and ECON 202, we move from abstract supply-and-demand reasoning to the concrete questions that define working life: Why do some jobs pay more than others? Does education raise productivity or merely signal it? What explains persistent wage gaps across gender and caste lines?
 
-The course follows George Borjas's *Labor Economics* (8th edition) across eleven chapters, progressing from the individual work-leisure decision through firm-level demand, market equilibrium, and compensating differentials, to the broader themes of human capital, wage inequality, migration, discrimination, incentive pay, and unemployment. Each topic is grounded in both theoretical models and empirical evidence, with particular attention to identification strategies that allow us to move from correlation to causation.
+The course follows George Borjas's *Labor Economics* (8th edition) across selected chapters, progressing from the individual work-leisure decision through compensating differentials, to the broader themes of human capital, discrimination, and unemployment. Each topic is grounded in both theoretical models and empirical evidence, with particular attention to identification strategies that allow us to move from correlation to causation.
 
 Throughout the semester, we anchor the textbook material in the Indian labour market context. India's labour force — characterised by high informality, low female participation, significant rural-urban migration, and deep caste-based segmentation — offers a rich laboratory for testing and extending the models developed in the Western empirical tradition. You will encounter data from the Periodic Labour Force Survey (PLFS), policy experiments such as NREGA, and recent research on the Indian informal economy alongside the standard US and European evidence.
 
 ---
 
-## The 11 Chapters
+## Chapters
 
 <div class="chapter-card" markdown>
 ### Chapter 1: Introduction
@@ -35,24 +35,6 @@ An overview of how economists study labour markets — what makes them different
 The work-leisure model, income and substitution effects, labour force participation rates, the reservation wage, and household production. We examine how taxes, transfer programs, and demographic shifts alter the decision to work.
 
 [:octicons-arrow-right-24: Start Chapter 2](chapters/02-labor-supply/index.md)
-</div>
-
-<div class="chapter-card" markdown>
-### Chapter 3: Labor Demand
-<span class="chapter-tag hours-tag">5 Hours</span> <span class="chapter-tag borjas-tag">Borjas Ch. 3</span>
-
-The theory of marginal productivity, short-run and long-run demand for labour, the elasticity of demand, and Marshall's rules of derived demand. How do firms respond to changes in wages and technology?
-
-[:octicons-arrow-right-24: Start Chapter 3](chapters/03-labor-demand/index.md)
-</div>
-
-<div class="chapter-card" markdown>
-### Chapter 4: Labor Market Equilibrium
-<span class="chapter-tag hours-tag">3 Hours</span> <span class="chapter-tag borjas-tag">Borjas Ch. 4</span>
-
-Competitive equilibrium in a single and multi-sector economy, the cobweb model of adjustment, the incidence of payroll taxes, and the economics of immigration. How do labour markets clear, and what happens when they do not?
-
-[:octicons-arrow-right-24: Start Chapter 4](chapters/04-equilibrium/index.md)
 </div>
 
 <div class="chapter-card" markdown>
@@ -74,24 +56,6 @@ The human capital model, the schooling decision, the Mincer earnings equation, s
 </div>
 
 <div class="chapter-card" markdown>
-### Chapter 7: The Wage Distribution
-<span class="chapter-tag hours-tag">4 Hours</span> <span class="chapter-tag borjas-tag">Borjas Ch. 7</span>
-
-Measuring inequality, skill-biased technological change, the superstar effect, the polarisation of the labour market, and the role of institutions. What forces have reshaped the wage distribution over the past four decades?
-
-[:octicons-arrow-right-24: Start Chapter 7](chapters/07-wage-distribution/index.md)
-</div>
-
-<div class="chapter-card" markdown>
-### Chapter 8: Labor Mobility
-<span class="chapter-tag hours-tag">3 Hours</span> <span class="chapter-tag borjas-tag">Borjas Ch. 8</span>
-
-Geographic migration as a human capital investment, the Roy model and self-selection, job turnover and labour market fluidity, and the economics of immigration. Why do workers move, and what are the consequences?
-
-[:octicons-arrow-right-24: Start Chapter 8](chapters/08-mobility/index.md)
-</div>
-
-<div class="chapter-card" markdown>
 ### Chapter 9: Labor Market Discrimination
 <span class="chapter-tag hours-tag">4 Hours</span> <span class="chapter-tag borjas-tag">Borjas Ch. 9</span>
 
@@ -101,21 +65,12 @@ Taste-based discrimination (Becker), statistical discrimination, the Oaxaca-Blin
 </div>
 
 <div class="chapter-card" markdown>
-### Chapter 10: Incentive Pay
-<span class="chapter-tag hours-tag">3 Hours</span> <span class="chapter-tag borjas-tag">Borjas Ch. 10</span>
-
-Piece rates and time rates, tournaments, efficiency wages, the principal-agent problem, and the design of compensation contracts. How do firms motivate workers when effort is difficult to observe?
-
-[:octicons-arrow-right-24: Start Chapter 10](chapters/10-incentive-pay/index.md)
-</div>
-
-<div class="chapter-card" markdown>
-### Chapter 11: Unemployment
-<span class="chapter-tag hours-tag">3 Hours</span> <span class="chapter-tag borjas-tag">Borjas Ch. 11</span>
+### Chapter 12: Unemployment
+<span class="chapter-tag hours-tag">3 Hours</span> <span class="chapter-tag borjas-tag">Borjas Ch. 12</span>
 
 Types of unemployment, search theory and the reservation wage, the design of unemployment insurance, the Beveridge curve, and the natural rate of unemployment. Why does unemployment persist even in good times?
 
-[:octicons-arrow-right-24: Start Chapter 11](chapters/11-unemployment/index.md)
+[:octicons-arrow-right-24: Start Chapter 12](chapters/11-unemployment/index.md)
 </div>
 
 ---
@@ -127,7 +82,6 @@ Types of unemployment, search theory and the reservation wage, the design of une
 | :material-book-open-variant: **Borjas Textbook** | Chapter-by-chapter companion to *Labor Economics* (8th ed.) by George Borjas |
 | :material-chart-line: **Indian Context** | Each chapter connected to Indian labour market evidence (PLFS, NREGA, informal economy) |
 | :material-laptop: **Stata Resources** | Empirical exercises and data analysis tutorials |
-| :material-help-circle: **Practice Problems** | MCQs, numerical problems, and short-answer questions per chapter |
 | :material-moon-waning-crescent: **Dark Mode** | Toggle for comfortable reading |
 
 ---

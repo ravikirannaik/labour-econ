@@ -5,7 +5,7 @@ description: "Internal migration in India — scale, corridors, barriers, season
 
 # Internal Migration in India
 
-India is a country of migrants. Yet for decades, internal migration remained statistically invisible, politically neglected, and academically understudied relative to its enormous scale. The textbook model of labour mobility -- developed primarily from the American experience of frictionless interstate movement -- breaks down spectacularly in a country where language, caste, welfare entitlements, and housing markets conspire to keep workers far less mobile than income differentials would predict. For students of labour economics, Indian internal migration is not merely an application of [Chapter 8: Labor Mobility](../chapters/08-mobility/index.md) -- it is a stress test of the standard model, revealing both its power and its limits.
+India is a country of migrants. Yet for decades, internal migration remained statistically invisible, politically neglected, and academically understudied relative to its enormous scale. The textbook model of labour mobility -- developed primarily from the American experience of frictionless interstate movement -- breaks down spectacularly in a country where language, caste, welfare entitlements, and housing markets conspire to keep workers far less mobile than income differentials would predict. For students of labour economics, Indian internal migration is not merely an application of Labor Mobility theory -- it is a stress test of the standard model, revealing both its power and its limits.
 
 ---
 

@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="ch9-discrimination-v1_files/libs/clipboard/clipboard.min.js"></script>
+<script src="ch9-discrimination-v1_files/libs/quarto-html/tabby.min.js"></script>
+<script src="ch9-discrimination-v1_files/libs/quarto-html/popper.min.js"></script>
+<script src="ch9-discrimination-v1_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="ch9-discrimination-v1_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="ch9-discrimination-v1_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="ch9-discrimination-v1_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.31">
+
+  <meta name="author" content="Ravikiran Naik">
+  <title>Labor Market Discrimination</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="ch9-discrimination-v1_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="ch9-discrimination-v1_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="ch9-discrimination-v1_files/libs/revealjs/dist/theme/quarto-dbb91d85ed35b86769e7d33ba5d12a62.css">
+  <link href="ch9-discrimination-v1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="ch9-discrimination-v1_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="ch9-discrimination-v1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="ch9-discrimination-v1_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="ch9-discrimination-v1_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="ch9-discrimination-v1_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="figures/misc/title-bg.png" data-background-size="cover" class="quarto-title-block center">
+  <h1 class="title">Labor Market Discrimination</h1>
+  <p class="subtitle">Labour Economics, ECON207 — UG-II, 2026: Semester IV</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Ravikiran Naik 
+</div>
+        <p class="quarto-title-affiliation">
+            Department of Economics, FLAME University
+          </p>
+    </div>
+</div>
+
+  <p class="date">April 2026</p>
+</section>
+<section class="slide level2">
+
+<style>
+.section-tag {
+  display: block;
+  font-size: 0.35em;
+  font-weight: 700;
+  color: #F01928;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.15em;
+  opacity: 0.7;
+  line-height: 1;
+}
+</style>
+
+<script>
+(function waitForReveal() {
+  if (typeof Reveal === 'undefined' || !Reveal.isReady()) {
+    setTimeout(waitForReveal, 100);
+    return;
+  }
+  // Add an invisible sentinel fragment to each slide with incremental items.
+  // Sequence: items dim one-by-one → last item → click → all bright → click → next slide.
+  document.querySelectorAll('.reveal .slides section').forEach(function(s) {
+    if (s.querySelectorAll(':scope > section').length > 0) return; // skip parent sections
+    var frags = s.querySelectorAll('.fragment:not(.sentinel-fragment)');
+    if (frags.length > 0) {
+      var sentinel = document.createElement('span');
+      sentinel.classList.add('fragment', 'sentinel-fragment');
+      sentinel.style.display = 'none';
+      s.appendChild(sentinel);
+    }
+  });
+  Reveal.sync();
+
+  Reveal.on('fragmentshown', function(event) {
+    if (event.fragment.classList.contains('sentinel-fragment')) {
+      event.fragment.closest('section').classList.add('all-visible');
+    }
+  });
+  Reveal.on('fragmenthidden', function(event) {
+    if (event.fragment.classList.contains('sentinel-fragment')) {
+      event.fragment.closest('section').classList.remove('all-visible');
+    }
+  });
+
+  // Inject section tags above h2 headings
+  document.querySelectorAll('.reveal section[data-section]').forEach(function(sec) {
+    var h2 = sec.querySelector('h2');
+    if (h2) {
+      var tag = document.createElement('span');
+      tag.className = 'section-tag';
+      tag.textContent = sec.getAttribute('data-section');
+      h2.insertBefore(tag, h2.firstChild);
+    }
+  });
+})();
+
+</script>
+</section>
+<section id="sections-covered" class="slide level2 smaller">
+<h2>Sections Covered</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>§</th>
+<th>Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9-1</td>
+<td>Race and Gender in the Labor Market</td>
+</tr>
+<tr class="even">
+<td>9-2</td>
+<td>The Discrimination Coefficient</td>
+</tr>
+<tr class="odd">
+<td>9-3</td>
+<td>Employer Discrimination</td>
+</tr>
+<tr class="even">
+<td>9-4</td>
+<td>Employee Discrimination</td>
+</tr>
+<tr class="odd">
+<td>9-5</td>
+<td>Customer Discrimination</td>
+</tr>
+<tr class="even">
+<td>9-6</td>
+<td>Statistical Discrimination</td>
+</tr>
+<tr class="odd">
+<td>9-8</td>
+<td>Measuring Discrimination</td>
+</tr>
+<tr class="even">
+<td>9-9</td>
+<td>Policy: The Black–White Wage Gap</td>
+</tr>
+<tr class="odd">
+<td>9-10</td>
+<td>The Relative Wage of Hispanics and Asians</td>
+</tr>
+<tr class="even">
+<td>9-11</td>
+<td>Policy: The Male–Female Wage Gap</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Chapter arc</strong></span>: theory → measurement → policy
+<ul>
+<li>Theory: Becker taste → employee/customer → statistical discrimination</li>
+<li>Measurement: Oaxaca-Blinder decomposition</li>
+<li>Policy: race, ethnicity, and gender wage gaps</li>
+</ul></li>
+<li>§9-7 (Experimental Evidence) skipped — available for self-study</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-labor-market-discrimination" class="slide level2" data-section="§9-1 · Race &amp; Gender in the Labor Market">
+<h2>What Is Labor Market Discrimination?</h2>
+<ul>
+<li class="fragment"><p>Discrimination occurs when the marketplace takes into account factors such as <span style="color: #F01928;"><strong>race, sex, caste, or appearance</strong></span> when making economic exchanges.</p></li>
+<li class="fragment"><p>These factors are <span style="color: #F01928;"><strong>not related to productivity</strong></span> — yet they affect hiring, wages, and occupational sorting.</p></li>
+<li class="fragment"><p>The central question: how much of the observed wage gap between groups reflects <span style="color: #F01928;"><strong>skill differences</strong></span> and how much reflects <span style="color: #F01928;"><strong>discrimination</strong></span>?</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Wage gaps can arise <span style="color: #F01928;"><strong>even without prejudice</strong></span> — employers may use socioeconomic background to fill information gaps about productivity</li>
+<li><span style="color: #F01928;"><strong>Opening prompt</strong></span>: “If two equally productive workers exist, should they earn the same?” — most say yes; then ask <em>“Do they?”</em></li>
+<li><em>India</em>: Thorat &amp; Attewell (2007) document caste discrimination in hiring; gender wage gaps persist after controlling for education</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="types-of-discrimination" class="slide level2" data-section="§9-1 · Race &amp; Gender in the Labor Market">
+<h2>Types of Discrimination</h2>
+<p><span style="color: #F01928;"><strong>Discriminatory Behaviours</strong></span> <em>(Oxford English Dictionary)</em></p>
+<ul>
+<li class="fragment"><span style="color: #F01928;"><strong>Ableism</strong></span> — discrimination in favour of able-bodied persons.</li>
+<li class="fragment"><span style="color: #F01928;"><strong>Ageism</strong></span> — prejudice or discrimination on the grounds of age, especially against the elderly.</li>
+<li class="fragment"><span style="color: #F01928;"><strong>Fattism</strong></span> — prejudice or discrimination against fat people.</li>
+<li class="fragment"><span style="color: #F01928;"><strong>Heterosexism</strong></span> — prejudice and antagonism by heterosexual persons toward homosexuals.</li>
+<li class="fragment"><span style="color: #F01928;"><strong>Lookism</strong></span> — prejudice or discrimination on the grounds of appearance.</li>
+<li class="fragment"><span style="color: #F01928;"><strong>Racism</strong></span> — hatred or intolerance of another race or other races.</li>
+<li class="fragment"><span style="color: #F01928;"><strong>Sexism</strong></span> — discrimination or devaluation based on a person’s sex, especially directed against women.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Key evidence by type</strong></span>:
+<ul>
+<li>Racism — Bertrand &amp; Mullainathan (2004): white-sounding names get <strong>50% more callbacks</strong></li>
+<li>Sexism — Goldin &amp; Rouse (2000): blind auditions raised female hiring by <strong>25–46%</strong></li>
+<li>Lookism — Hamermesh &amp; Biddle (1994): <strong>5–10% beauty premium</strong>, even in non-customer roles</li>
+<li>Ableism — disabled workers in India earn <strong>30–50% less</strong> after controls (World Bank 2007)</li>
+<li>Ageism — older applicants get fewer callbacks despite equal qualifications (Neumark et al.&nbsp;2019)</li>
+<li>Fattism — BMI wage penalty is <strong>larger for women</strong> (Rudolph et al.&nbsp;2009)</li>
+<li>Heterosexism — gay men earned <strong>5–10% less</strong> (Badgett 1995); India’s Section 377 struck down 2018</li>
+</ul></li>
+<li><em>India</em>: Thorat &amp; Attewell (2007) replicate callback study for caste; “motherhood penalty” ~5% per child (Kleven et al.&nbsp;2019)</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="race-and-gender-in-the-labor-market" class="slide level2" data-section="§9-1 · Race &amp; Gender in the Labor Market">
+<h2>Race and Gender in the Labor Market</h2>
+<ul>
+<li class="fragment"><p>Men earn more than women, and whites usually earn more than non-whites — these are <span style="color: #F01928;"><strong>raw wage differentials</strong></span>.</p></li>
+<li class="fragment"><p>Differences in <span style="color: #F01928;"><strong>educational attainment</strong></span> between whites and non-whites account for a <span style="color: #F01928;"><strong>portion</strong></span> of the wage differential — but not all of it.</p></li>
+<li class="fragment"><p>After controlling for education, experience, occupation, and region, a <span style="color: #F01928;"><strong>residual gap</strong></span> remains — this residual is often attributed to discrimination.</p></li>
+<li class="fragment"><p>The key empirical challenge is <span style="color: #F01928;"><strong>decomposing</strong></span> the raw gap into an <span style="color: #F01928;"><strong>explained</strong></span> portion (skills) and an <span style="color: #F01928;"><strong>unexplained</strong></span> portion (discrimination).</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Table 9-1</strong></span>: full-time white men earn ~<strong>$88.7K</strong> vs white women <strong>$65.7K</strong> — a ~35% raw gap</li>
+<li>The unexplained residual is an <span style="color: #F01928;"><strong>upper bound</strong></span> on discrimination — may also reflect unmeasured skills, preferences, or selection</li>
+<li>Wage gaps are <strong>not US-specific</strong> — similar race/gender patterns in Malaysia, Canada, Britain, Israel, India</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-the-discrimination-coefficient" class="slide level2" data-section="§9-2 · The Discrimination Coefficient">
+<h2>What Is the Discrimination Coefficient?</h2>
+<ul>
+<li class="fragment"><p><span style="color: #F01928;"><strong>Gary Becker (1957)</strong></span> formalised the notion of <span style="color: #F01928;"><strong>taste-based discrimination</strong></span> — racial prejudice translated into economic behaviour.</p></li>
+<li class="fragment"><p>A prejudiced employer perceives the cost of hiring a Black worker as <span style="color: #F01928;"><strong>higher than the true cost</strong></span>.</p></li>
+<li class="fragment"><p>Even though it costs <span class="math inline">\(w_B\)</span> dollars to hire one person-hour of Black labour, the employer acts as if it costs <span class="math inline">\(w_B(1 + d)\)</span>, where <span class="math inline">\(d &gt; 0\)</span> is the <span style="color: #F01928;"><strong>discrimination coefficient</strong></span>.</p></li>
+<li class="fragment"><p>A larger <span class="math inline">\(d\)</span> means <span style="color: #F01928;"><strong>more prejudice</strong></span>: the employer requires a bigger wage discount before willingly hiring Black workers.</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>The framework <span style="color: #F01928;"><strong>extends to other agents</strong></span>:
+<ul>
+<li>Employees act as if wage is <strong>w_W(1 − d)</strong> alongside minorities</li>
+<li>Customers act as if price is <strong>p(1 + d)</strong> when served by minorities</li>
+</ul></li>
+<li>The coefficient <span style="color: #F01928;"><strong>“monetises” prejudice</strong></span> — translates a taste into a dollar cost</li>
+<li><span style="color: #F01928;"><strong>Key prediction</strong></span>: discrimination is <strong>costly to the employer</strong> — prejudice is an economic luxury</li>
+<li><em>India</em>: Banerjee et al.&nbsp;(2009) show caste-based hiring preferences operate as Becker-type taste discrimination</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-does-a-non-discriminating-firm-hire" class="slide level2" data-section="§9-3 · Employer Discrimination">
+<h2>How Does a Non-Discriminating Firm Hire?</h2>
+
+<img data-src="../figures/ch9/9-1.png" style="width:55.0%" class="r-stretch"><div style="text-align: center; font-size: 0.55em; margin-top: -0.5em; opacity: 0.7;">
+<p><em>Figure 9-1: The Hiring Decision of a Firm That Does Not Discriminate</em></p>
+</div>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Reading the figure</strong></span>:
+<ul>
+<li>Horizontal red line = market Black wage <strong>w_B</strong></li>
+<li>Downward blue curve = <strong>VMP_E</strong> (value of marginal product)</li>
+<li>Firm hires Black workers rightward until <strong>w_B = VMP_E</strong> at point **E*_B**</li>
+</ul></li>
+<li><span style="color: #F01928;"><strong>Key logic</strong></span>: both groups equally productive, but <strong>w_B &lt; w_W</strong> → non-discriminator hires <strong>only Black workers</strong> (100% minority workforce)</li>
+<li>Production function: q = f(E_W + E_B) — output depends on <em>total</em> workers, not type; <strong>MP is identical</strong> regardless of race</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-does-a-prejudiced-firm-hire" class="slide level2" data-section="§9-3 · Employer Discrimination">
+<h2>How Does a Prejudiced Firm Hire?</h2>
+
+<img data-src="../figures/ch9/9-2.png" style="width:85.0%" class="r-stretch"><div style="text-align: center; font-size: 0.55em; margin-top: -0.5em; opacity: 0.7;">
+<p><em>Figure 9-2: The Hiring Decision of a Prejudiced Firm</em></p>
+</div>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Decision rule</strong></span> (Eq. 9-3): compare <strong>w_W</strong> with <strong>w_B(1 + d)</strong> — if adjusted minority cost &gt; w_W → hire only whites</li>
+<li><span style="color: #F01928;"><strong>Panel (a) — White Firm</strong></span>:
+<ul>
+<li>w_B(1 + d) &gt; w_W → hires <strong>only white workers</strong> at w_W</li>
+<li>Employment where w_W = VMP_E → point **E*_W**</li>
+</ul></li>
+<li><span style="color: #F01928;"><strong>Panel (b) — Black Firm</strong></span> shows three levels:
+<ul>
+<li>w_B(1 + d_1) highest → fewest workers at <strong>E¹_B</strong></li>
+<li>w_B(1 + d_0) middle → more workers at <strong>E⁰_B</strong></li>
+<li>w_B (no prejudice) → maximum employment at **E*_B**</li>
+</ul></li>
+<li><span style="color: #F01928;"><strong>Takeaway</strong></span>: as <em>d</em> falls from d_1 → d_0 → 0, employment <strong>rises</strong> — discrimination always means <strong>too few workers</strong> hired</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="employer-discrimination-key-implications" class="slide level2" data-section="§9-3 · Employer Discrimination">
+<h2>Employer Discrimination: Key Implications</h2>
+<ul>
+<li class="fragment"><p>If Black and white workers are <span style="color: #F01928;"><strong>perfect substitutes</strong></span>, the Becker model predicts <span style="color: #F01928;"><strong>segregated workforces</strong></span>: each firm hires only one race.</p></li>
+<li class="fragment"><p>Even <span style="color: #F01928;"><strong>non-discriminating employers</strong></span> end up with a segregated (all-Black) workforce — they hire the cheaper, equally productive group.</p></li>
+<li class="fragment"><p><span style="color: #F01928;"><strong>Discrimination does not pay</strong></span>: prejudiced employers hire the wrong type of worker and/or the wrong number of workers — reducing their <span style="color: #F01928;"><strong>profits</strong></span>.</p></li>
+<li class="fragment"><p>In <span style="color: #F01928;"><strong>competitive markets</strong></span>, discriminating firms earn lower profits and should eventually be <span style="color: #F01928;"><strong>driven out</strong></span> by non-discriminating competitors.</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Prejudiced firms <span style="color: #F01928;"><strong>pay for the right to discriminate</strong></span> out of their own pocket — wrong type and/or wrong number of workers</li>
+<li>The most profitable firm has <span style="color: #F01928;"><strong>d = 0</strong></span>; discriminators earn lower profits → competitive pressure to exit</li>
+<li>Segregation is <span style="color: #F01928;"><strong>endogenous</strong></span>: taste discrimination produces workplace segregation even without segregation laws</li>
+<li><span style="color: #F01928;"><strong>The puzzle</strong></span>: if discrimination is costly, why does it persist? → monopoly power, customer/employee discrimination, collusion, or coordination failure</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="profits-and-discrimination" class="slide level2" data-section="§9-3 · Employer Discrimination">
+<h2>Profits and Discrimination</h2>
+
+<img data-src="../figures/ch9/9-3.png" style="width:60.0%" class="r-stretch"><div style="text-align: center; font-size: 0.55em; margin-top: -0.5em; opacity: 0.7;">
+<p><em>Figure 9-3: Profits and the Discrimination Coefficient</em></p>
+</div>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Reading left to right</strong></span>:
+<ul>
+<li>At <strong>d = 0</strong> → firm earns maximum profit <strong>π_max</strong> (non-discriminator)</li>
+<li>As <em>d</em> increases → profit <strong>declines</strong> (line slopes down)</li>
+</ul></li>
+<li><span style="color: #F01928;"><strong>Left region (d &lt; d_W)</strong></span> — “Black Firms”: still hire Black workers but at increasing perceived cost; profits fall</li>
+<li><span style="color: #F01928;"><strong>Threshold d_W</strong></span> (dotted vertical line): firm <strong>switches</strong> from hiring Black to hiring only white workers</li>
+<li><span style="color: #F01928;"><strong>Right region (d &gt; d_W)</strong></span> — “White Firms”: all hire only whites at w_W; earn the same <strong>flat low profit π_W</strong></li>
+<li><span style="color: #F01928;"><strong>Key gap</strong></span>: distance between <strong>π_max</strong> and <strong>π_W</strong> = the <strong>cost of discrimination</strong> — paid out of employer’s own pocket</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="determination-of-the-relative-minority-wage" class="slide level2" data-section="§9-3 · Employer Discrimination">
+<h2>Determination of the Relative Minority Wage</h2>
+
+<img data-src="../figures/ch9/9-4.png" style="width:55.0%" class="r-stretch"><div style="text-align: center; font-size: 0.55em; margin-top: -0.5em; opacity: 0.7;">
+<p><em>Figure 9-4: Determination of the Relative Minority Wage in the Labor Market</em></p>
+</div>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Curves</strong></span>:
+<ul>
+<li>Vertical red line <strong>S</strong> at <strong>N</strong> = fixed supply of Black workers</li>
+<li>Downward blue line <strong>D</strong> = demand, starting from point <strong>R</strong> on y-axis</li>
+</ul></li>
+<li><span style="color: #F01928;"><strong>Reading top to bottom</strong></span>:
+<ul>
+<li>When ratio &gt; 1, no firm hires minorities</li>
+<li>As ratio falls along D, more firms are “compensated” for disutility → <strong>demand rises</strong></li>
+<li>At very low ratios, even highly prejudiced firms are “bought off”</li>
+</ul></li>
+<li><span style="color: #F01928;"><strong>Equilibrium</strong></span>: S and D intersect at <strong>(w_B/w_W)</strong>*, set by the <strong>marginal discriminator</strong> — always <strong>below 1</strong> when all firms are prejudiced</li>
+<li>Adjustment: above equilibrium → excess supply → wage falls; below → excess demand → wage rises</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="when-some-firms-have-negative-discrimination-coefficients" class="slide level2" data-section="§9-3 · Employer Discrimination">
+<h2>When Some Firms Have Negative Discrimination Coefficients</h2>
+
+<img data-src="../figures/ch9/9-5.png" style="width:55.0%" class="r-stretch"><div style="text-align: center; font-size: 0.55em; margin-top: -0.5em; opacity: 0.7;">
+<p><em>Figure 9-5: The Relative Minority Wage When Some Firms Have Negative d</em></p>
+</div>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Key shift</strong></span>: some firms <strong>prefer</strong> minorities (negative <em>d</em>) → they bid up minority wages</li>
+<li>Demand curve D’ is shifted <strong>right/up</strong> compared to D in Fig 9-4</li>
+<li>With sufficiently small minority supply <strong>N</strong>, equilibrium <strong>(w_B/w_W)</strong>* can exceed <strong>1</strong> — minorities earn <span style="color: #F01928;"><strong>more</strong></span> than majority workers</li>
+<li><span style="color: #F01928;"><strong>Implication</strong></span>: the observed wage gap measures the <strong>marginal firm’s <em>d</em></strong>, not the average prejudice level — <strong>distribution matters</strong> more than the mean</li>
+<li>The wage disadvantage should <strong>not</strong> be interpreted as a summary of total prejudice in the market</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="employee-discrimination" class="slide level2" data-section="§9-4 · Employee Discrimination">
+<h2>Employee Discrimination</h2>
+<ul>
+<li class="fragment"><p><span style="color: #F01928;"><strong>Employee discrimination</strong></span>: white workers dislike working alongside Black workers — they require a <span style="color: #F01928;"><strong>compensating differential</strong></span> (higher wage) to do so.</p></li>
+<li class="fragment"><p><span style="color: #F01928;"><strong>Key result</strong></span>: employee discrimination does <span style="color: #F01928;"><strong>not</strong></span> generate a wage differential between equally skilled Black and white workers.</p></li>
+<li class="fragment"><p>Employee discrimination does <span style="color: #F01928;"><strong>not affect</strong></span> the profitability of firms — the cost is borne by prejudiced workers themselves (they sort into segregated workplaces).</p></li>
+<li class="fragment"><p>The outcome is <span style="color: #F01928;"><strong>workplace segregation</strong></span>: Black and white workers end up in different firms, but at the same wage.</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Mechanism</strong></span>: white workers act as if wage is <strong>w_W(1 − d)</strong> in an integrated workplace — disutility from working alongside minorities</li>
+<li>A profit-maximising employer <span style="color: #F01928;"><strong>never</strong></span> chooses integration — “it does not pay to mix”; cheaper to <strong>segregate entirely</strong></li>
+<li>Competition for cheapest workers <span style="color: #F01928;"><strong>equalises wages</strong></span> across segregated firms — both groups earn their VMP, just in separate firms</li>
+<li><span style="color: #F01928;"><strong>Key contrast</strong></span>: unlike employer discrimination, <strong>no market forces</strong> diminish employee discrimination over time — no profit motive to eliminate it</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="customer-discrimination" class="slide level2" data-section="§9-5 · Customer Discrimination">
+<h2>Customer Discrimination</h2>
+<ul>
+<li class="fragment"><p>If customers discriminate, their perceived price of a good is <span style="color: #F01928;"><strong>utility-adjusted</strong></span> with a discrimination coefficient: they act as if the price is <span class="math inline">\(p(1 + d_c)\)</span> when served by a Black worker.</p></li>
+<li class="fragment"><p>When a firm <span style="color: #F01928;"><strong>cannot hide</strong></span> Black workers from customers, customer discrimination can have an <span style="color: #F01928;"><strong>adverse effect on Black wages</strong></span>.</p></li>
+<li class="fragment"><p>Customer discrimination is most relevant in <span style="color: #F01928;"><strong>customer-facing</strong></span> occupations (sales, services, professional consultations).</p></li>
+<li class="fragment"><p>Firms may respond by assigning minority workers to <span style="color: #F01928;"><strong>back-office</strong></span> roles — creating <span style="color: #F01928;"><strong>occupational segregation</strong></span> even within firms.</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>When it bites</strong></span>: harms minority wages only in “contact” (customer-facing) jobs where firms <strong>cannot hide</strong> workers</li>
+<li>If firms <em>can</em> allocate workers → minorities placed in non-contact roles → customer discrimination <strong>may not matter much</strong></li>
+<li><span style="color: #F01928;"><strong>Evidence</strong></span>:
+<ul>
+<li><strong>Table 9-2</strong>: contact vs.&nbsp;non-contact comparison → DiD estimate = <strong>14.6 percentage points</strong></li>
+<li><strong>Baseball cards</strong>: white players’ cards cost <strong>10–13% more</strong> than Black players’, controlling for stats</li>
+</ul></li>
+<li><span style="color: #F01928;"><strong>Why it persists</strong></span>: firms cannot force customers to be unprejudiced; competitive forces <strong>cannot easily eliminate</strong> it</li>
+<li><em>India</em>: customer discrimination may operate through caste in food service, domestic work, and personal services</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-statistical-discrimination" class="slide level2" data-section="§9-6 · Statistical Discrimination">
+<h2>What Is Statistical Discrimination?</h2>
+<ul>
+<li class="fragment"><p><span style="color: #F01928;"><strong>Statistical discrimination</strong></span> occurs when employers base decisions on the <span style="color: #F01928;"><strong>average characteristics</strong></span> of the group to which a worker belongs.</p></li>
+<li class="fragment"><p>Employers use <span style="color: #F01928;"><strong>imperfect predictors of productivity</strong></span>: age, education, and experience provide some information — but not enough.</p></li>
+<li class="fragment"><p>Employers may use <span style="color: #F01928;"><strong>race and gender as well</strong></span>, since these also provide statistical information about group averages.</p></li>
+<li class="fragment"><p><span style="color: #F01928;"><strong>Example</strong></span>: young males pay higher car insurance rates because, <span style="color: #F01928;"><strong>on average</strong></span>, they have more accidents — even though many individual young men are safe drivers.</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Key distinction</strong></span>: wage differences arise <strong>even without prejudice</strong> — group membership carries information</li>
+<li><span style="color: #F01928;"><strong>No malice required</strong></span>: a “colour-blind, gender-blind, profit-maximising employer” still discriminates if group averages differ</li>
+<li>Applicants from high-productivity groups <span style="color: #F01928;"><strong>benefit</strong></span>; those from low-productivity groups are <strong>penalised regardless of individual merit</strong></li>
+<li>Formalised by <strong>Phelps (1972)</strong> and <strong>Arrow (1973)</strong> — rational but unfair use of group-level information</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="statistical-discrimination-the-mechanism" class="slide level2" data-section="§9-6 · Statistical Discrimination">
+<h2>Statistical Discrimination: The Mechanism</h2>
+<ul>
+<li class="fragment"><p>Gender may provide information on <span style="color: #F01928;"><strong>job commitment</strong></span> since women on average have <span style="color: #F01928;"><strong>higher turnover rates</strong></span>.</p></li>
+<li class="fragment"><p>Race may provide information about <span style="color: #F01928;"><strong>schooling quality</strong></span> since Black workers on average attended <span style="color: #F01928;"><strong>lower-quality schools</strong></span> than white workers.</p></li>
+<li class="fragment"><p>The employer is not being <span style="color: #F01928;"><strong>malicious</strong></span> — they are using all available information to minimise <span style="color: #F01928;"><strong>hiring costs</strong></span>.</p></li>
+<li class="fragment"><p>The <span style="color: #F01928;"><strong>problem</strong></span>: workers whose individual characteristics differ from the group average are <span style="color: #F01928;"><strong>harmed</strong></span> — a high-commitment woman or a well-educated Black worker is judged by the group mean, not their own traits.</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Core problem</strong></span>: employers cannot perfectly observe individual productivity → use <strong>group membership as a noisy signal</strong> (adverse selection)</li>
+<li><span style="color: #F01928;"><strong>Efficient but unfair</strong></span>: minimises hiring costs for the firm, but <strong>harms individuals</strong> who deviate from their group average</li>
+<li><strong>Insurance analogy</strong>: firms routinely use group info — life insurance by gender, auto insurance by age; “prior experience about group averages will surely matter”</li>
+<li><span style="color: #F01928;"><strong>Convergence prediction</strong></span>: statistical discrimination <strong>diminishes</strong> as group averages converge — male-female turnover rates are indeed converging</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="statistical-discrimination-implications" class="slide level2" data-section="§9-6 · Statistical Discrimination">
+<h2>Statistical Discrimination: Implications</h2>
+<ul>
+<li class="fragment"><p>Employers are <span style="color: #F01928;"><strong>not harmed</strong></span> when they practise statistical discrimination — they <span style="color: #F01928;"><strong>gain</strong></span> since they minimise hiring costs.</p></li>
+<li class="fragment"><p>Statistical discrimination will <span style="color: #F01928;"><strong>diminish</strong></span> if the average characteristics of the groups <span style="color: #F01928;"><strong>converge</strong></span> over time.</p></li>
+<li class="fragment"><p>Male-female <span style="color: #F01928;"><strong>turnover rates are converging</strong></span> — this should reduce gender-based statistical discrimination.</p></li>
+<li class="fragment"><p><span style="color: #F01928;"><strong>Policy challenge</strong></span>: banning the use of group characteristics (e.g., race or gender) in hiring forces employers to use <span style="color: #F01928;"><strong>less informative signals</strong></span> — but it protects individuals from being judged by group averages.</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Surprise</strong></span>: statistical discrimination does <strong>not necessarily</strong> predict average Blacks earn less — it benefits some while harming others</li>
+<li><span style="color: #F01928;"><strong>Self-fulfilling prophecy</strong></span>: if employers invest less in women’s training (expecting high turnover), women <strong>rationally</strong> have higher turnover → discrimination becomes self-reinforcing (Coate &amp; Loury 1993)</li>
+<li>Policy: banning group characteristics (Title VII, EEO) forces employers to use <strong>less informative signals</strong> — justified even when statistical discrimination is “rational”</li>
+<li><em>India</em>: reservation policies address both taste and statistical discrimination; caste-based hiring stereotypes may function as statistical discrimination (Deshpande 2011)</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="impact-of-statistical-discrimination-on-wages" class="slide level2" data-section="§9-6 · Statistical Discrimination">
+<h2>Impact of Statistical Discrimination on Wages</h2>
+
+<img data-src="../figures/ch9/9-6.png" style="width:55.0%" class="r-stretch"><div style="text-align: center; font-size: 0.55em; margin-top: -0.5em; opacity: 0.7;">
+<p><em>Figure 9-6: Statistical Discrimination and Wages</em></p>
+</div>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Key formula</strong></span>: w = (1 − α)T̄ + αT — wage depends on <strong>both</strong> own score and <strong>group average</strong>; α = signal quality</li>
+<li><span style="color: #F01928;"><strong>Panel (a) — “Whites Have a Higher Average Score”</strong></span>:
+<ul>
+<li>Two upward-sloping lines with <strong>same slope</strong> but different intercepts (Whites always do better on avg.)</li>
+<li>White line (upper) and Black line (lower)</li>
+<li>At any test score T*, white worker earns <strong>more</strong> → gap = difference in group means (White=percived to be more Prod. by group Avg.)</li>
+</ul></li>
+<li><span style="color: #F01928;"><strong>Panel (b) — “Test Is Better Predictor for Whites”</strong></span>:
+<ul>
+<li>White line is <strong>steeper</strong> (higher α) → more weight on own score</li>
+<li>Black line is <strong>flatter</strong> (lower α) → more weight on group mean</li>
+<li>Lines <strong>cross</strong> at T̄(same mean score but the test more informative about the white)</li>
+<li>Since Test is bad predictor of Black : Treated as low prod. similar wages. -low scoring black will benefit than the white as its pooled wage.</li>
+</ul></li>
+<li><span style="color: #F01928;"><strong>Crossover result</strong></span>: left of T̄, low-scoring Blacks earn <strong>more</strong>; right of T̄, high-scoring Blacks earn <strong>less</strong> — helps some, hurts others</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="non-discrimination-factors" class="slide level2" data-section="§9-6 · Statistical Discrimination">
+<h2>Non-Discrimination Factors</h2>
+<ul>
+<li class="fragment"><p>Raw racial and gender differentials in earnings, occupational distribution, and unemployment must be interpreted with <span style="color: #F01928;"><strong>caution</strong></span>.</p></li>
+<li class="fragment"><p>Factors <span style="color: #F01928;"><strong>other than discrimination</strong></span> may play a role:</p></li>
+<li class="fragment"><p><span style="color: #F01928;"><strong>Individual choice</strong></span>: women may choose occupations with greater flexibility for family responsibilities.</p></li>
+<li class="fragment"><p><span style="color: #F01928;"><strong>Pre-market human capital</strong></span>: differences in schooling quality, field of study, and work experience.</p></li>
+<li class="fragment"><p>The challenge is separating <span style="color: #F01928;"><strong>constrained choices</strong></span> (driven by discrimination or social norms) from <span style="color: #F01928;"><strong>free choices</strong></span> (driven by genuine preferences).</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Same years of schooling ≠ same skills: groups “attend institutions that vary in quality” → Oaxaca produces a <span style="color: #F01928;"><strong>biased measure</strong></span></li>
+<li><span style="color: #F01928;"><strong>Omitted variable problem</strong></span>: “anyone who doubts discrimination can always point out a variable was left out” — the residual is never definitive</li>
+<li><span style="color: #F01928;"><strong>Pre-market discrimination</strong></span>: “cultural discrimination as well as differential funding” of schools influences human capital <strong>before</strong> labour market entry</li>
+<li>“Choices” are themselves shaped by social norms, stereotypes, and discrimination (Blau &amp; Kahn 2017) — separating <strong>constrained</strong> from <strong>free</strong> choices is the core challenge</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-do-we-measure-discrimination" class="slide level2" data-section="§9-8 · Measuring Discrimination">
+<h2>How Do We Measure Discrimination?</h2>
+<ul>
+<li class="fragment"><p>One possible measure is the <span style="color: #F01928;"><strong>difference in mean wages</strong></span> — but this confounds discrimination with skill differences.</p></li>
+<li class="fragment"><p>A better measure would compare the wages of <span style="color: #F01928;"><strong>equally skilled workers</strong></span> from different groups.</p></li>
+<li class="fragment"><p>The <span style="color: #F01928;"><strong>Oaxaca decomposition</strong></span> (1973): a technique that decomposes the raw wage differential into:</p></li>
+<li class="fragment"><p>A portion related to <span style="color: #F01928;"><strong>differences in skills</strong></span> (explained component).</p></li>
+<li class="fragment"><p>A portion attributable to <span style="color: #F01928;"><strong>labour market discrimination</strong></span> (unexplained component).</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Oaxaca-Blinder (1973)</strong></span>: the standard tool for splitting a wage gap into <strong>explained</strong> (skills) and <strong>unexplained</strong> (discrimination) components</li>
+<li>Raw gap Δw = w̄_M − w̄_F is “unappealing — comparing apples and oranges”; need to <span style="color: #F01928;"><strong>adjust for skill differences</strong></span></li>
+<li><span style="color: #F01928;"><strong>Method</strong></span>: estimate separate wage regressions for each group → decompose into discrimination (different returns to same characteristics) and skills (different characteristics at male returns)</li>
+<li><strong>Limitation</strong>: the unexplained component is an <span style="color: #F01928;"><strong>upper bound</strong></span> on discrimination — may include unmeasured productivity differences</li>
+<li><em>India</em>: Madheswaran &amp; Attewell (2007) apply Oaxaca to caste wage gaps (NSS data); find significant unexplained residuals for SC/ST workers</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-oaxacablinder-decomposition" class="slide level2" data-section="§9-8 · Measuring Discrimination">
+<h2>The Oaxaca–Blinder Decomposition</h2>
+<ul>
+<li class="fragment"><p><span style="color: #F01928;"><strong>Raw wage gap</strong></span>: <span class="math inline">\(\Delta w = \color{#0000DC}{\bar{w}_M} - \color{#F01928}{\bar{w}_F}\)</span> — <span style="color: #F01928;"><strong>“comparing apples and oranges”</strong></span> (confounds skills with discrimination).</p></li>
+<li class="fragment"><p>Estimate <span style="color: #F01928;"><strong>separate earnings functions</strong></span> for each group: <span class="math display">\[\color{#0000DC}{w_M = \alpha_M + \beta_M\, s_M} \qquad \color{#F01928}{w_F = \alpha_F + \beta_F\, s_F}\]</span></p></li>
+<li class="fragment"><p>No discrimination: <span class="math inline">\(\alpha_M = \alpha_F\)</span> and <span class="math inline">\(\beta_M = \beta_F\)</span> — employers value skills <span style="color: #F01928;"><strong>equally</strong></span>.</p></li>
+<li class="fragment"><p><span style="color: #F01928;"><strong>Decomposition</strong></span> (Eq. 9-8): <span class="math display">\[\Delta w = \underbrace{\left\{(\alpha_M - \alpha_F) + (\beta_M - \beta_F)\bar{s}_F\right\}}_{\color{#F01928}{\text{Due to discrimination}}} + \underbrace{\beta_M(\bar{s}_M - \bar{s}_F)}_{\color{#0000DC}{\text{Due to skills}}}\]</span></p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>The trick</strong></span> (Eq. 9-8): add and subtract β_M × s̄_F → splits the raw gap into two clean components</li>
+<li><span style="color: #F01928;"><strong>Discrimination component</strong></span> = (α_M − α_F) + (β_M − β_F)s̄_F — the gap if women had the <strong>same schooling</strong> as men</li>
+<li><span style="color: #F01928;"><strong>Skills component</strong></span> = β_M(s̄_M − s̄_F) — the gap because men have <strong>more schooling</strong>; zero if s̄_M = s̄_F</li>
+<li><span style="color: #F01928;"><strong>Caveat</strong></span>: “look carefully at the fine print” — the discrimination share <strong>changes dramatically</strong> with control variables (Table 9-3)</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="statistical-discrimination-and-wages" class="slide level2" data-section="§9-8 · Measuring Discrimination">
+<h2>Statistical Discrimination and Wages</h2>
+<ul>
+<li class="fragment"><p>The firm’s wage offer is a <span style="color: #F01928;"><strong>weighted average</strong></span> of the applicant’s own score <span class="math inline">\(\color{#0000DC}{T}\)</span> and the group average <span class="math inline">\(\color{#F01928}{\bar{T}}\)</span>: <span class="math display">\[w = (1 - \alpha)\,\color{#F01928}{\bar{T}} + \alpha\,\color{#0000DC}{T}\]</span></p></li>
+<li class="fragment"><p><span class="math inline">\(\alpha = 1\)</span>: test <span style="color: #F01928;"><strong>perfectly predicts</strong></span> — wage depends only on <span style="color: #0000DC;">own score</span>; <span class="math inline">\(\alpha = 0\)</span>: own score <span style="color: #F01928;"><strong>meaningless</strong></span> — employer relies entirely on <span style="color: #F01928;">group average</span>.</p></li>
+<li class="fragment"><p><span class="math inline">\(\alpha\)</span> = <span style="color: #F01928;"><strong>predictive power</strong></span> of the screening test — higher <span class="math inline">\(\alpha\)</span> means less reliance on group membership.</p></li>
+<li class="fragment"><p>Statistical discrimination affects <span style="color: #F01928;"><strong>both the intercept and the slope</strong></span> of the wage–test-score line.</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><strong>T</strong> = numerical score combining all screening info (résumé, interview, tests); if perfectly correlated, a score of 15 → VMP of $15</li>
+<li><span style="color: #F01928;"><strong>Realism</strong></span>: perfect prediction is unrealistic — “some low-scoring applicants will turn out to be quite productive, and some high-scoring applicants will be spectacular failures”</li>
+<li><span style="color: #F01928;"><strong>Two channels</strong></span> through which statistical discrimination affects wages:
+<ol type="1">
+<li><strong>Intercept</strong> — different group averages T̄ shift the wage line up/down</li>
+<li><strong>Slope</strong> — different α values tilt the line (Fig 9-6 illustrates both)</li>
+</ol></li>
+<li>Even a “colour-blind, gender-blind, profit-maximising employer” will use group membership when individual signals are noisy</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="measuring-gender-discrimination-on-wages" class="slide level2" data-section="§9-8 · Measuring Discrimination">
+<h2>Measuring Gender Discrimination on Wages</h2>
+
+<img data-src="../figures/ch9/9-7.png" style="width:55.0%" class="r-stretch"><div style="text-align: center; font-size: 0.55em; margin-top: -0.5em; opacity: 0.7;">
+<p><em>Figure 9-7: Measuring the Impact of Discrimination on the Wage</em></p>
+</div>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Reading the figure</strong></span>:
+<ul>
+<li>Average woman at **(s̄_F, w̄_F)** on the blue (female) line</li>
+<li>Average man at **(s̄_M, w̄_M)** on the red (male) line</li>
+<li>Raw gap = full vertical distance **w̄_M − w̄_F**</li>
+</ul></li>
+<li><span style="color: #F01928;">**Counterfactual point w*_F**</span>: where s̄_F meets the <strong>male</strong> (red) line — what the average woman would earn if “treated like a man”</li>
+<li><span style="color: #F01928;"><strong>Discrimination</strong></span> = **w*_F − w̄_F<strong>: gap between red and blue lines </strong>at the same schooling level** s̄_F</li>
+<li><span style="color: #F01928;"><strong>Skills</strong></span> = **w̄_M − w*_F**: portion explained by men having more schooling (moving along red line from s̄_F to s̄_M)</li>
+<li><em>Caveat</em>: decomposition is valid only if we control for <strong>all</strong> skill differences between groups</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="determinants-of-the-whiteblack-wage-ratio" class="slide level2" data-section="§9-9 · The Black–White Wage Gap">
+<h2>Determinants of the White–Black Wage Ratio</h2>
+<ul>
+<li class="fragment"><p>There has been an <span style="color: #F01928;"><strong>upward trend</strong></span> in the wages of Black workers relative to white workers in recent decades.</p></li>
+<li class="fragment"><p>This has been attributed to increases in the <span style="color: #F01928;"><strong>quality and quantity</strong></span> of Black schooling.</p></li>
+<li class="fragment"><p><span style="color: #F01928;"><strong>Government programs</strong></span> — civil rights legislation, affirmative action, and equal employment opportunity enforcement — have positively affected Black wages.</p></li>
+<li class="fragment"><p>However, the <span style="color: #F01928;"><strong>convergence has stalled</strong></span> since the mid-1970s, and the Black-white wage ratio has remained roughly constant for decades.</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Table 9-3 (Oaxaca)</strong></span>:
+<ul>
+<li>Raw gap = <strong>−0.211</strong></li>
+<li>With education/age/region → skills = −0.082, discrimination = −0.134</li>
+<li>Adding occupation/industry → skills = −0.114, discrimination = <strong>−0.098</strong></li>
+</ul></li>
+<li><span style="color: #F01928;"><strong>Fine print warning</strong></span>: discrimination share <strong>changes dramatically</strong> with control variables — “look carefully at the fine print”</li>
+<li>Rising returns to skill post-1980 may have <span style="color: #F01928;"><strong>offset</strong></span> anti-discrimination gains</li>
+<li><span style="color: #F01928;"><strong>Schooling convergence</strong></span>: in 1940, white men had 9.9 years vs 6.0 for Black; by 1980 gap was <strong>only 1.4 years</strong>; quality gap also narrowed</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="trend-in-blackwhite-earnings-ratio-19672020" class="slide level2" data-section="§9-9 · The Black–White Wage Gap">
+<h2>Trend in Black–White Earnings Ratio, 1967–2020</h2>
+
+<img data-src="../figures/ch9/9-8.png" style="width:55.0%" class="r-stretch"><div style="text-align: center; font-size: 0.55em; margin-top: -0.5em; opacity: 0.7;">
+<p><em>Figure 9-8: Trend in Black–White Earnings Ratio, 1967–2020</em></p>
+</div>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Men’s line (red)</strong></span>:
+<ul>
+<li>Starts at ~<strong>0.65</strong> (1967) → rises to ~<strong>0.71</strong> by 1980 → reaches ~<strong>0.81</strong> by 2020</li>
+<li>Civil Rights era jump, then a long plateau</li>
+</ul></li>
+<li><span style="color: #F01928;"><strong>Women’s line (blue)</strong></span>:
+<ul>
+<li>Rises sharply from ~<strong>0.75</strong> to ~<strong>0.96</strong> in mid-1970s</li>
+<li>Then gradually declines to ~<strong>0.85–0.90</strong> — convergence partially reversed</li>
+</ul></li>
+<li><span style="color: #F01928;"><strong>Policy drivers</strong></span>: 1964 Civil Rights Act + Title VII; Executive Orders 11246/11375 barred contractor discrimination</li>
+<li><em>Example</em>: South Carolina textiles — Black employment rose from 4–5% to nearly <strong>20% by 1970</strong> after executive orders</li>
+<li>Post-1980 stagnation in men’s ratio: rising inequality and returns to skill may be <strong>working against</strong> convergence</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="male-lfp-rates-by-race-19552020" class="slide level2" data-section="§9-9 · The Black–White Wage Gap">
+<h2>Male LFP Rates, by Race, 1955–2020</h2>
+
+<img data-src="../figures/ch9/9-9.png" style="width:55.0%" class="r-stretch"><div style="text-align: center; font-size: 0.55em; margin-top: -0.5em; opacity: 0.7;">
+<p><em>Figure 9-9: Male Labor Force Participation Rates, by Race, 1955–2020</em></p>
+</div>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Reading the figure</strong></span>:
+<ul>
+<li>Mid-1950s: both groups start at ~<strong>85%</strong> LFP</li>
+<li>By 2020: Whites ~<strong>70%</strong>, Blacks ~<strong>64%</strong> — gap of almost <strong>6 percentage points</strong></li>
+</ul></li>
+<li><span style="color: #F01928;"><strong>Selection bias</strong></span>: as least-skilled Black men <strong>drop out</strong> of the labour force, the average wage of those remaining <strong>rises</strong> → makes the wage ratio look better than reality</li>
+<li>The observed increase in Black wage “need not indicate an improvement” — may reveal the <span style="color: #F01928;"><strong>least-skilled are no longer working</strong></span></li>
+<li><em>Incarceration</em>: disproportionate incarceration removes Black men from the labour force, further inflating the measured wage ratio (Western &amp; Pettit 2005)</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-decline-in-black-lfp-and-the-average-black-wage" class="slide level2" data-section="§9-9 · The Black–White Wage Gap">
+<h2>The Decline in Black LFP and the Average Black Wage</h2>
+
+<img data-src="../figures/ch9/9-10.png" style="width:55.0%" class="r-stretch"><div style="text-align: center; font-size: 0.55em; margin-top: -0.5em; opacity: 0.7;">
+<p><em>Figure 9-10: Decline in Black Labor Force Participation and the Average Black Wage</em></p>
+</div>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Reading the figure</strong></span>:
+<ul>
+<li>Two red dotted vertical lines mark reservation wages <strong>w<em>₁<strong> (lower) and </strong>w</em>₂</strong> (higher)</li>
+<li>Only workers earning above the reservation wage participate</li>
+<li>Red tick marks show mean observed wages <strong>w̄₁</strong> and <strong>w̄₂</strong></li>
+</ul></li>
+<li><span style="color: #F01928;"><strong>Selection mechanism</strong></span>:
+<ul>
+<li>Reservation wage rises from w<em>₁ to w</em>₂ → left tail is <strong>truncated</strong></li>
+<li>Fewer Blacks work, but remaining sample is more skilled</li>
+<li>Measured average wage <strong>shifts right</strong> from w̄₁ to w̄₂</li>
+</ul></li>
+<li><span style="color: #F01928;"><strong>Magnitude</strong></span>: about <strong>a third</strong> of the improvement in relative Black wage (1969–1989) is compositional change, not genuine improvement (Butler &amp; Heckman 1977)</li>
+<li><em>AFQT puzzle</em>: racial AFQT gap accounts for “practically the entire wage gap” among young workers — typical Black worker earns 20% less, but <strong>only 5% less</strong> with same AFQT score</li>
+<li><em>Caveat</em>: AFQT ≠ innate ability — it partly measures <strong>pre-market skills</strong> acquired before labour market entry</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="discrimination-against-other-groups" class="slide level2" data-section="§9-10 · Hispanics &amp; Asians">
+<h2>Discrimination Against Other Groups</h2>
+<ul>
+<li class="fragment"><p>Differences in wages across ethnic groups can be linked to <span style="color: #F01928;"><strong>varying educational attainment</strong></span>.</p></li>
+<li class="fragment"><p>Less skilled workers earn less, consistent with <span style="color: #F01928;"><strong>human capital theory</strong></span>.</p></li>
+<li class="fragment"><p><span style="color: #F01928;"><strong>Asian workers</strong></span> tend to earn <span style="color: #F01928;"><strong>more</strong></span> than white workers, mainly due to higher levels of schooling.</p></li>
+<li class="fragment"><p>The <span style="color: #F01928;"><strong>Hispanic-white wage gap</strong></span> has remained relatively stable, reflecting persistent differences in educational attainment and immigration patterns.</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Hispanic gap</strong></span>: over three-quarters attributable to <strong>differences in educational attainment</strong> — especially among Mexican-origin workers</li>
+<li><span style="color: #F01928;"><strong>Asian advantage</strong></span>: Asian men earned ~30% more than white men in 2020; driven by <strong>high educational attainment</strong></li>
+<li><strong>Demographic shifts</strong>: Hispanic population grew 6.4% (1980) → 18.5% (2019); Asian from 1.5% → 5.9%</li>
+<li><em>“Shades of Black”</em>: light skin = $14.42/hr, medium = $13.23, dark = $11.72 (vs $15.94 white men); light-skinned immigrants earn <strong>17% more</strong> than dark-skinned</li>
+<li><em>Speech discrimination</em>: Black workers whose speech is “distinctly identified” earn about <strong>12% less</strong> than those who sound “white”</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="trend-in-relative-earnings-of-hispanics-and-asians-19742020" class="slide level2" data-section="§9-10 · Hispanics &amp; Asians">
+<h2>Trend in Relative Earnings of Hispanics and Asians, 1974–2020</h2>
+
+<img data-src="../figures/ch9/9-11.png" style="width:55.0%" class="r-stretch"><div style="text-align: center; font-size: 0.55em; margin-top: -0.5em; opacity: 0.7;">
+<p><em>Figure 9-11: Trend in Relative Earnings of Hispanics and Asians, 1974–2020</em></p>
+</div>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Top pair — Asian</strong></span>:
+<ul>
+<li>Asian Women (~1.05–1.15) and Asian Men (~1.0→1.15+)</li>
+<li>Both consistently <strong>above 1</strong> — earning more than whites; reflects high educational attainment</li>
+</ul></li>
+<li><span style="color: #F01928;"><strong>Bottom pair — Hispanic</strong></span>:
+<ul>
+<li>Hispanic Women (~0.85→0.75) and Hispanic Men (~0.74→0.62→0.71)</li>
+<li>Both <strong>below 1</strong> and declining or flat through 2000s</li>
+</ul></li>
+<li><span style="color: #F01928;"><strong>Hispanic decline</strong></span> reflects <strong>changing composition</strong> — large inflow of less-educated immigrants depresses the group average, not necessarily growing disadvantage</li>
+<li><em>Within ethnicity</em>: Asian women earn slightly more than Asian men relative to white counterparts; Hispanic women earn more than Hispanic men in relative terms</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="determinants-of-the-malefemale-wage-ratio" class="slide level2" data-section="§9-11 · The Male–Female Wage Gap">
+<h2>Determinants of the Male–Female Wage Ratio</h2>
+<ul>
+<li class="fragment"><p><span style="color: #F01928;"><strong>Occupational crowding</strong></span> has segregated women into particular occupations where the return to education is <span style="color: #F01928;"><strong>lower</strong></span>.</p></li>
+<li class="fragment"><p>Human capital is more profitable the <span style="color: #F01928;"><strong>longer the payoff period</strong></span> — women who anticipated career interruptions historically invested in occupations with <span style="color: #F01928;"><strong>lower depreciation rates</strong></span>.</p></li>
+<li class="fragment"><p>Women are better off if they enter occupations in which their skills <span style="color: #F01928;"><strong>do not deteriorate</strong></span> during years spent in the household sector.</p></li>
+<li class="fragment"><p>The gender wage gap has narrowed substantially since 1980, driven by <span style="color: #F01928;"><strong>rising female education</strong></span>, <span style="color: #F01928;"><strong>delayed fertility</strong></span>, and <span style="color: #F01928;"><strong>changing occupational choices</strong></span>.</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Occupational crowding evidence</strong></span>: fewer than 6% of aircraft mechanics are women, but 98%+ of kindergarten teachers; a woman in a 75%+ female occupation earns <strong>14% less</strong> than one in a 75%+ male occupation</li>
+<li><span style="color: #F01928;"><strong>Table 9-4 (Oaxaca)</strong></span>:
+<ul>
+<li>Raw gap = −0.286</li>
+<li>With education/age/region → skills = −0.008, discrimination = −0.279</li>
+<li>Adding occupation/industry → skills = −0.076, discrimination = −0.211</li>
+</ul></li>
+<li><strong>Key omitted variable</strong>: same-age men and women may have <strong>very different</strong> work experience</li>
+<li><span style="color: #F01928;"><strong>Case studies</strong></span>:
+<ul>
+<li><em>Michigan Law</em>: 15 years post-graduation, men $141K vs women $86K — two-thirds due to <strong>work history</strong></li>
+<li><em>Booth MBA</em>: no gap at start, but men earn <strong>30% more after 5 years, 60% after 15</strong>; 40%+ of women had career interruptions vs 10% of men</li>
+<li><em>Uber</em>: no algorithm bias, yet men earn <strong>7% more</strong> — explained by profitable hours, more experience, driving <strong>4% faster</strong></li>
+</ul></li>
+<li><strong>Goldin (2014)</strong>: the “last chapter” of convergence requires <strong>workplace flexibility</strong>; gap largest where long hours are disproportionately rewarded</li>
+<li><em>India</em>: female LFP declining (U-shape hypothesis); gaps persist even in formal sector</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="trend-in-femalemale-earnings-ratio-19602020" class="slide level2" data-section="§9-11 · The Male–Female Wage Gap">
+<h2>Trend in Female–Male Earnings Ratio, 1960–2020</h2>
+
+<img data-src="../figures/ch9/9-12.png" style="width:55.0%" class="r-stretch"><div style="text-align: center; font-size: 0.55em; margin-top: -0.5em; opacity: 0.7;">
+<p><em>Figure 9-12: Trend in Female–Male Earnings Ratio, 1960–2020</em></p>
+</div>
+<aside class="notes">
+<ul>
+<li><span style="color: #F01928;"><strong>Reading the figure</strong></span>:
+<ul>
+<li>Line hovers at ~<strong>0.57–0.60</strong> from 1960 to 1980</li>
+<li>Rises steadily from early 1980s → reaches ~<strong>0.83</strong> by 2020</li>
+</ul></li>
+<li><span style="color: #F01928;"><strong>What drove the rise</strong></span>: women investing more in human capital, entering professional occupations, <strong>more permanent labour force attachment</strong></li>
+<li><span style="color: #F01928;"><strong>Remaining ~18% gap</strong></span> (2020): some combination of discrimination, occupational sorting, and the “motherhood penalty” (Kleven et al.&nbsp;2019)</li>
+<li><em>Affirmative action asymmetry</em>: “little impact on white women, but a sizable impact on <strong>Black women</strong>” — federal contractors employed 35% of Black women in 1970, nearly half by 1980</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="review-introduction" class="slide level2">
+<h2>Review — Introduction</h2>
+<ul>
+<li>Discrimination occurs when the marketplace accounts for factors (race, sex, caste) unrelated to productivity.</li>
+<li>Raw wage differentials between groups partly reflect skill differences and partly reflect discrimination.</li>
+<li>The empirical challenge is decomposing the gap into explained (skills) and unexplained (discrimination) components.</li>
+</ul>
+</section>
+<section id="review-taste-discrimination-becker" class="slide level2">
+<h2>Review — Taste Discrimination (Becker)</h2>
+<ul>
+<li>The <span style="color: #F01928;"><strong>discrimination coefficient</strong></span> <span class="math inline">\(d\)</span> makes the employer perceive minority labour as costing <span class="math inline">\(w_B(1+d)\)</span> rather than <span class="math inline">\(w_B\)</span>.</li>
+<li>With perfect substitutes, the Becker model predicts segregated workforces — each firm hires only one race.</li>
+<li>Discrimination is costly: prejudiced firms earn lower profits and should be driven out by competitive forces.</li>
+<li>Persistence of discrimination suggests imperfect competition or non-employer sources of prejudice.</li>
+</ul>
+</section>
+<section id="review-employee-customer-statistical-discrimination" class="slide level2">
+<h2>Review — Employee, Customer &amp; Statistical Discrimination</h2>
+<ul>
+<li><span style="color: #F01928;"><strong>Employee discrimination</strong></span> produces workplace segregation but not wage gaps.</li>
+<li><span style="color: #F01928;"><strong>Customer discrimination</strong></span> creates wage gaps in customer-facing occupations; competitive forces cannot easily eliminate it.</li>
+<li><span style="color: #F01928;"><strong>Statistical discrimination</strong></span> is rational but unfair: employers judge individuals by group averages when individual signals are noisy.</li>
+<li>Statistical discrimination diminishes as group characteristics converge.</li>
+</ul>
+</section>
+<section id="review-measuring-discrimination-policy-evidence" class="slide level2">
+<h2>Review — Measuring Discrimination &amp; Policy Evidence</h2>
+<ul>
+<li>The <span style="color: #F01928;"><strong>Oaxaca decomposition</strong></span> splits the raw wage gap into explained (skill differences) and unexplained (discrimination) components.</li>
+<li>The Black-white wage ratio rose sharply after the Civil Rights Act but has stalled since the mid-1970s.</li>
+<li>Declining Black male LFP biases the measured wage ratio upward (selection effect).</li>
+<li>The gender wage gap has narrowed from ~60% to ~82% since 1980, driven by rising female education and changing occupational choices.</li>
+</ul>
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="ch9-discrimination-v1_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="ch9-discrimination-v1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="ch9-discrimination-v1_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="ch9-discrimination-v1_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="ch9-discrimination-v1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="ch9-discrimination-v1_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="ch9-discrimination-v1_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="ch9-discrimination-v1_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="ch9-discrimination-v1_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="ch9-discrimination-v1_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="ch9-discrimination-v1_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 0.6,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 6.0e-2,
+
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+
+        maxScale: 2,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
+            }
+            return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    <script src="scroll-nav.js"></script>
+    <script src="chalkboard-bridge.js"></script>
+    
+
+</body></html>

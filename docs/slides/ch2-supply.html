@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="ch2-supply-v1_files/libs/clipboard/clipboard.min.js"></script>
+<script src="ch2-supply-v1_files/libs/quarto-html/tabby.min.js"></script>
+<script src="ch2-supply-v1_files/libs/quarto-html/popper.min.js"></script>
+<script src="ch2-supply-v1_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="ch2-supply-v1_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="ch2-supply-v1_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="ch2-supply-v1_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.31">
+
+  <meta name="author" content="Ravikiran Naik">
+  <title>Labour Supply</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="ch2-supply-v1_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="ch2-supply-v1_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="ch2-supply-v1_files/libs/revealjs/dist/theme/quarto-449cd8933a966d6be405c72a2950e32c.css">
+  <link href="ch2-supply-v1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="ch2-supply-v1_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="ch2-supply-v1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="ch2-supply-v1_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="ch2-supply-v1_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="ch2-supply-v1_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="figures/misc/title-bg.png" data-background-size="cover" class="quarto-title-block center">
+  <h1 class="title">Labour Supply</h1>
+  <p class="subtitle">Labour Economics, ECON207 — UG-II, 2026: Semester IV</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Ravikiran Naik 
+</div>
+        <p class="quarto-title-affiliation">
+            Department of Economics, FLAME University
+          </p>
+    </div>
+</div>
+
+  <p class="date">March 2026</p>
+</section>
+<section class="slide level2">
+
+<style>
+  .section-tag {
+    display: block;
+    font-size: 0.45em;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgb(240, 25, 40);
+    margin-bottom: 0.15em;
+  }
+</style>
+<script>
+(function waitForReveal() {
+  if (typeof Reveal === 'undefined' || !Reveal.isReady()) {
+    setTimeout(waitForReveal, 100);
+    return;
+  }
+  Reveal.on('fragmentshown', function() {
+    var slide = Reveal.getCurrentSlide();
+    var frags = slide.querySelectorAll('.fragment');
+    var allDone = true;
+    frags.forEach(function(f) {
+      if (!f.classList.contains('visible')) allDone = false;
+    });
+    if (allDone) slide.classList.add('all-visible');
+  });
+  Reveal.on('fragmenthidden', function() {
+    Reveal.getCurrentSlide().classList.remove('all-visible');
+  });
+  document.querySelectorAll('.reveal section[data-section]').forEach(function(s) {
+    var h = s.querySelector('h2');
+    if (h && !s.querySelector('.section-tag')) {
+      var tag = document.createElement('span');
+      tag.className = 'section-tag';
+      tag.textContent = s.dataset.section;
+      h.insertBefore(tag, h.firstChild);
+    }
+  });
+})();
+</script>
+</section>
+<section id="section" class="slide level2" data-background-color="#FFD700">
+<h2></h2>
+<div style="text-align: center;">
+<p><br></p>
+<p><span style="font-size: 2.5em; color: #BF616A;"><strong>Labour Supply</strong></span></p>
+<p><br></p>
+<blockquote>
+<p><em>“You become what you give your attention to.”</em></p>
+<p><strong>— Epictetus</strong></p>
+</blockquote>
+</div>
+</section>
+<section id="sections-covered" class="slide level2 smaller">
+<h2>Sections Covered</h2>
+<table class="table-bordered caption-top">
+<caption>Borjas, <em>Labor Economics</em> 9E — Chapter 2</caption>
+<thead>
+<tr class="header">
+<th>§</th>
+<th>Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2-1</td>
+<td>Measuring the Labor Force</td>
+</tr>
+<tr class="even">
+<td>2-2</td>
+<td>Basic Facts about Labor Supply</td>
+</tr>
+<tr class="odd">
+<td>2-3</td>
+<td>The Worker’s Preferences</td>
+</tr>
+<tr class="even">
+<td>2-4</td>
+<td>The Budget Constraint</td>
+</tr>
+<tr class="odd">
+<td>2-5</td>
+<td>The Hours of Work Decision</td>
+</tr>
+<tr class="even">
+<td>2-6</td>
+<td>To Work or Not to Work?</td>
+</tr>
+<tr class="odd">
+<td>2-7</td>
+<td>The Labor Supply Curve</td>
+</tr>
+<tr class="even">
+<td>2-8</td>
+<td>Estimates of the Labor Supply Elasticity</td>
+</tr>
+<tr class="odd">
+<td>2-11</td>
+<td>Policy Application: Welfare Programs &amp; Work Incentives</td>
+</tr>
+<tr class="even">
+<td>2-12</td>
+<td>Policy Application: The Earned Income Tax Credit</td>
+</tr>
+<tr class="odd">
+<td>2-13</td>
+<td>Labor Supply over the Life Cycle</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="avg.-weekly-hours-of-work-of-production-workers-19002013" class="slide level2" data-section="§2-2 · Basic Facts about Labor Supply">
+<h2>Avg. Weekly Hours of Work of Production Workers, 1900–2013</h2>
+<p><embed data-src="figures/ch2/2-1-fig.pdf" style="width:75.0%"></p>
+<aside class="notes">
+<p>This figure shows the long secular decline in the average workweek in manufacturing, from roughly 55 hours at the start of the twentieth century to about 41 hours by 2013. The decline was especially steep before the Second World War, flattening out considerably in the post-war decades. This long-run pattern is one of the most important stylised facts in labour economics: as real wages rose over the century, workers chose to “buy” more leisure, suggesting that income effects have outweighed substitution effects in the very long run.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="major-components-of-the-workforce-india" class="slide level2" data-section="§2-2 · Basic Facts about Labor Supply">
+<h2>Major Components of the Workforce — India</h2>
+<p><embed data-src="figures/ch3/fig-3-1-major-components-sw2023.pdf" style="width:100.0%"></p>
+<aside class="notes">
+<p>This figure from the State of Working India 2023 report decomposes India’s total workforce into its major components — self-employed, regular wage/salaried, and casual workers — with absolute numbers. Self-employment remains the dominant category. The figure sets the stage for thinking about labour supply in the Indian context, where a large fraction of workers operate outside standard wage employment and where concepts like “hours of work” and “reservation wage” must be interpreted carefully.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="key-labour-market-indicators-20172022" class="slide level2 smaller" data-section="§2-1 · Measuring the Labor Force">
+<h2>Key Labour Market Indicators (2017–2022)</h2>
+<table class="caption-top">
+<caption>Source: Periodic Labour Force Survey (PLFS), various rounds. Absolute numbers are calculated by multiplying survey ratios with Census population projections.</caption>
+<colgroup>
+<col style="width: 42%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Indicator / Year</th>
+<th>2017-18</th>
+<th>2018-19</th>
+<th>2019-20</th>
+<th>2020-21</th>
+<th>2021-22</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Absolute Numbers (millions)</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Working age population</td>
+<td>968</td>
+<td>985</td>
+<td>1000</td>
+<td>1022</td>
+<td>1021</td>
+</tr>
+<tr class="odd">
+<td>Labour force</td>
+<td>468</td>
+<td>478</td>
+<td>512</td>
+<td>525</td>
+<td>528</td>
+</tr>
+<tr class="even">
+<td>Workforce</td>
+<td>427</td>
+<td>436</td>
+<td>467</td>
+<td>486</td>
+<td>493</td>
+</tr>
+<tr class="odd">
+<td>Unemployed</td>
+<td>41</td>
+<td>42</td>
+<td>45</td>
+<td>39</td>
+<td>35</td>
+</tr>
+<tr class="even">
+<td>Out of labour force</td>
+<td>500</td>
+<td>508</td>
+<td>488</td>
+<td>489</td>
+<td>493</td>
+</tr>
+<tr class="odd">
+<td><strong>Rates (%)</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Labour force participation rate</td>
+<td>48.4</td>
+<td>48.5</td>
+<td>51.2</td>
+<td>51.4</td>
+<td>51.7</td>
+</tr>
+<tr class="odd">
+<td>Workforce participation rate</td>
+<td>44.1</td>
+<td>44.3</td>
+<td>46.7</td>
+<td>47.5</td>
+<td>48.3</td>
+</tr>
+<tr class="even">
+<td>Unemployment rate</td>
+<td><span style="color: #BF616A;"><strong>8.7</strong></span></td>
+<td>8.7</td>
+<td>8.8</td>
+<td>7.5</td>
+<td>6.6</td>
+</tr>
+<tr class="odd">
+<td>Out of labour force</td>
+<td>51.6</td>
+<td>51.5</td>
+<td>48.8</td>
+<td>47.9</td>
+<td>48.3</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>This table presents key Indian labour market indicators from five rounds of the PLFS. The labour force participation rate has been rising from 48.4% to 51.7%, while the unemployment rate has declined from 8.7% in 2017-18 to 6.6% in 2021-22. The highlighted 8.7% unemployment rate in 2017-18 was a politically significant figure — it was one of the highest on record and its suppressed release became a major controversy. Notice that roughly half the working-age population remains outside the labour force, reflecting in large part the very low female labour force participation rate in India.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="key-labour-market-indicators-monthly-earnings-20172022" class="slide level2 smaller" data-section="§2-2 · Basic Facts about Labor Supply">
+<h2>Key Labour Market Indicators: Monthly Earnings (2017–2022)</h2>
+<table class="caption-top">
+<caption>Source: Periodic Labour Force Survey (PLFS), various rounds. Earnings are in 2022 rupees.</caption>
+<thead>
+<tr class="header">
+<th>Indicator / Year</th>
+<th>2017-18</th>
+<th>2018-19</th>
+<th>2019-20</th>
+<th>2020-21</th>
+<th>2021-22</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Monthly Earnings (₹)</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Self-employment</td>
+<td>12,318</td>
+<td>12,988</td>
+<td>11,560</td>
+<td>11,411</td>
+<td>12,089</td>
+</tr>
+<tr class="odd">
+<td>Casual wage</td>
+<td>6,959</td>
+<td>7,209</td>
+<td>7,324</td>
+<td>7,431</td>
+<td>7,856</td>
+</tr>
+<tr class="even">
+<td>Regular wage</td>
+<td>19,450</td>
+<td>19,690</td>
+<td>18,907</td>
+<td>19,074</td>
+<td>19,456</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>Real monthly earnings across all three employment categories have been remarkably stagnant between 2017-18 and 2021-22 once we adjust for inflation. Regular wage workers earn roughly three times what casual wage workers earn, while self-employment earnings sit in between. The COVID-19 shock in 2019-20 and 2020-21 is visible in the dip in self-employment earnings. The persistence of this wage hierarchy — regular above self-employed above casual — is a structural feature of the Indian labour market that shapes how we think about labour supply decisions in a developing economy.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="flfpr-indian-states-vs.-comparable-developing-countries" class="slide level2" data-section="§2-2 · Basic Facts about Labor Supply">
+<h2>FLFPR: Indian States vs.&nbsp;Comparable Developing Countries</h2>
+<p><embed data-src="figures/ch2/fig-2-11-swi2023.pdf" style="width:70.0%"></p>
+<aside class="notes">
+<p>India’s female labour force participation rate is strikingly low compared to countries at similar levels of development. This figure from the State of Working India 2023 report plots FLFPR against some development indicator for Indian states and comparable developing countries. Indian states cluster consistently below the international pattern. This is the U-shaped FLFPR puzzle — participation initially declines with development (as women leave agriculture) and then rises (as education and service-sector opportunities expand). India appears stuck near the bottom of this U, and understanding why requires going beyond the simple neoclassical model to consider cultural norms, safety concerns, and the nature of available work.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="flfpr-indian-states-what-relationship" class="slide level2" data-section="§2-2 · Basic Facts about Labor Supply">
+<h2>FLFPR: Indian States — What Relationship?</h2>
+
+<img data-src="figures/misc/FLFPR-states.png" style="width:65.0%" class="r-stretch"><aside class="notes">
+<p>This scatterplot of Indian states explores the relationship between female labour force participation and some correlate — likely per-capita income or urbanisation. The question mark in the title is deliberate: is there a clear pattern, or is the relationship messy and mediated by state-level factors such as cultural norms around women’s work, the sectoral composition of the economy, and the availability of socially acceptable employment? This motivates the theoretical framework we develop next, where we model the labour supply decision as driven by preferences, wages, and non-labour income — but recognise that social context shapes all three.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-1" class="slide level2" data-background-color="#FFD700">
+<h2></h2>
+<div style="text-align: center;">
+<p><br></p>
+<p><span style="font-size: 2.2em; color: #BF616A;"><strong>The Neoclassical Model of Labour-Leisure Choice</strong></span></p>
+<p><br></p>
+</div>
+</section>
+<section id="neo-classical-model-of-labor-leisure-choice" class="slide level2" data-section="§2-3 · The Worker's Preferences">
+<h2>Neo-Classical Model of Labor-Leisure Choice</h2>
+<ul>
+<li class="fragment"><p><span style="color: #BF616A;"><strong>Utility Function</strong></span> — the worker derives satisfaction from consumption (<span class="math inline">\(C\)</span>) and leisure (<span class="math inline">\(L\)</span>)</p></li>
+<li class="fragment"><p><span style="color: #BF616A;"><strong>Indifference Curves</strong></span> — all combinations of <span class="math inline">\(C\)</span> and <span class="math inline">\(L\)</span> that yield the same utility</p></li>
+<li class="fragment"><p><span style="color: #BF616A;"><strong>Budget Constraint</strong></span> — the set of affordable consumption-leisure bundles</p></li>
+<li class="fragment"><p><span style="color: #BF616A;"><strong>The Hours of Work Decision</strong></span> — maximise utility subject to the budget constraint</p></li>
+<li class="fragment"><p><span style="color: #BF616A;"><strong>Optimal Consumption and Leisure</strong></span> — tangency of indifference curve and budget line</p></li>
+</ul>
+<aside class="notes">
+<p>We now set up the core neoclassical model of labour supply. The worker has preferences over two “goods” — consumption of market goods and leisure — and faces a constraint determined by the wage rate, non-labour income, and the total time endowment. The model generates predictions about how changes in wages and income affect the decision to work and how many hours to work. Every subsequent topic in this chapter — reservation wages, backward-bending supply curves, welfare programs, the EITC — is an application of this basic framework.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="indifference-curves" class="slide level2" data-section="§2-3 · The Worker's Preferences">
+<h2>Indifference Curves</h2>
+<p><embed data-src="figures/ch2/2-2-fig.pdf" style="width:65.0%"></p>
+<aside class="notes">
+<p>Points X and Y lie on the same indifference curve and yield the same utility (say, 25,000 utils). Point Z lies on a higher indifference curve and therefore yields more utility. The four key properties of indifference curves are: they are downward-sloping (reflecting the trade-off between consumption and leisure), higher curves represent higher utility, they do not intersect, and they are convex to the origin (reflecting diminishing marginal rate of substitution — as you have more leisure, each additional hour of leisure is worth less in consumption terms).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="indifference-curves-cannot-cross" class="slide level2" data-section="§2-3 · The Worker's Preferences">
+<h2>Indifference Curves Cannot Cross</h2>
+<p><embed data-src="figures/ch2/2-3-fig.pdf" style="width:60.0%"></p>
+<aside class="notes">
+<p>This is a proof-by-contradiction diagram. Points X and Y yield the same utility because they lie on the same indifference curve. Points Y and Z should also yield the same utility because they too lie on a common indifference curve. By transitivity, X and Z should yield the same utility — but Z clearly has more of both goods than X, so Z must be preferred. This contradiction proves that indifference curves cannot intersect. The result depends on the assumption that preferences are transitive and that more is preferred to less.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="differences-in-preferences-across-workers" class="slide level2" data-section="§2-3 · The Worker's Preferences">
+<h2>Differences in Preferences Across Workers</h2>
+<p><embed data-src="figures/ch2/2-4-fig.pdf" style="width:100.0%"></p>
+<aside class="notes">
+<p>Panel (a) shows Cindy’s indifference curves, which are steep — she requires a substantial bribe in the form of additional consumption to give up an hour of leisure. Cindy places a high value on her free time. Panel (b) shows Mindy’s indifference curves, which are much flatter — she attaches a lower value to leisure and is willing to trade it away for relatively small increases in consumption. These differences in preferences will lead Cindy and Mindy to make very different labour supply decisions even if they face identical wages and non-labour income. Preference heterogeneity is a key reason why we observe different people working very different hours at the same wage.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-budget-constraint" class="slide level2" data-section="§2-4 · The Budget Constraint">
+<h2>The Budget Constraint</h2>
+<ul>
+<li>The <span style="color: #BF616A;"><strong>budget constraint</strong></span> defines the worker’s opportunity set — all consumption-leisure combinations the worker can afford.</li>
+</ul>
+<p><span class="math display">\[C = wh + V\]</span></p>
+<ul>
+<li><p>Consumption equals labour earnings (<span class="math inline">\(w \times\)</span> hours of work) plus non-labour income (<span class="math inline">\(V\)</span>)</p></li>
+<li><p>Since <span class="math inline">\(h = T - L\)</span>, we can rewrite:</p></li>
+</ul>
+<p><span class="math display">\[C = w(T - L) + V\]</span></p>
+<aside class="notes">
+<p>The budget constraint is the centrepiece of the model. Total consumption equals wage income plus non-labour income. Non-labour income includes things like investment returns, spousal earnings, or government transfers. The key insight is that the wage rate represents the price of leisure — every hour not worked costs the worker <span class="math inline">\(w\)</span> in forgone earnings. The time endowment <span class="math inline">\(T\)</span> is typically set at 24 hours per day or some fraction of waking hours. The constraint is linear in consumption-leisure space, with slope equal to the negative of the wage rate.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="graphing-the-budget-constraint" class="slide level2" data-section="§2-4 · The Budget Constraint">
+<h2>Graphing the Budget Constraint</h2>
+<p><embed data-src="figures/ch2/2-5-new.pdf" style="width:65.0%"></p>
+<aside class="notes">
+<p>Point E is the endowment point, showing the consumption the worker can afford if she does not work at all — this equals her non-labour income <span class="math inline">\(V\)</span>. As the worker trades leisure for work, she moves up and to the left along the budget line, gaining <span class="math inline">\(w\)</span> dollars of consumption for each hour of leisure given up. The absolute value of the slope of the budget line is the wage rate <span class="math inline">\(w\)</span>. The horizontal intercept is the total time endowment <span class="math inline">\(T\)</span> (maximum possible leisure), and the vertical intercept is <span class="math inline">\(wT + V\)</span> (maximum possible consumption if all time is spent working).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-hours-of-work-decision" class="slide level2" data-section="§2-5 · The Hours of Work Decision">
+<h2>The Hours of Work Decision</h2>
+<ul>
+<li class="fragment"><p>Individuals choose consumption and leisure to <span style="color: #BF616A;"><strong>maximise utility</strong></span></p></li>
+<li class="fragment"><p><span style="color: #BF616A;"><strong>Optimal consumption</strong></span> is given by the point where the budget line is tangent to the indifference curve</p>
+<ul>
+<li class="fragment">At this point, the <span style="color: #BF616A;"><strong>marginal rate of substitution (MRS)</strong></span> between consumption and leisure equals the wage</li>
+<li class="fragment">Any other consumption-leisure bundle on the budget constraint would give the individual less utility</li>
+</ul></li>
+</ul>
+<aside class="notes">
+<p>The worker solves a constrained optimisation problem: maximise <span class="math inline">\(U(C, L)\)</span> subject to <span class="math inline">\(C = w(T - L) + V\)</span>. The first-order condition requires that the marginal rate of substitution between consumption and leisure equals the wage rate. Intuitively, at the optimum, the rate at which the worker is willing to trade leisure for consumption (the MRS, given by the slope of the indifference curve) exactly equals the rate at which the market allows her to make that trade (the wage rate, given by the slope of the budget line). Interior solutions occur when the worker chooses to work positive hours; corner solutions arise when the worker prefers not to work at all.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="optimal-consumption-and-leisure" class="slide level2" data-section="§2-5 · The Hours of Work Decision">
+<h2>Optimal Consumption and Leisure</h2>
+<p><embed data-src="figures/ch2/2-6-new.pdf" style="width:55.0%"></p>
+<aside class="notes">
+<p>A utility-maximising worker chooses the consumption-leisure bundle at point P, where the indifference curve is tangent to the budget line. At this point, the slopes are equal: <span class="math inline">\(MRS = w\)</span>. The worker cannot reach a higher indifference curve because it lies entirely above the budget constraint. Any other point on the budget line — say, to the left or right of P — would place the worker on a lower indifference curve. This is the fundamental diagram of labour supply theory, and every subsequent comparative static builds on this tangency condition.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="your-turn-1" class="slide level2" data-section="§2-5 · The Hours of Work Decision">
+<h2>Your Turn 1</h2>
+<p><strong>Suppose that at a particular combination of income and leisure, the slope of the budget line is steeper than the slope of the indifference curve it intersects.</strong></p>
+<ol type="1">
+<li>How should the worker adjust work hours?</li>
+</ol>
+<aside class="notes">
+<p>If the slope of the budget line is steeper than the slope of the indifference curve at their intersection, the market wage exceeds the worker’s marginal rate of substitution — meaning the market values an hour of work more highly than the worker values the corresponding hour of leisure. The worker should therefore work more hours, moving up and to the left along the budget line. This allows her to reach a higher indifference curve. She continues increasing hours until the MRS rises to equal the wage rate — that is, until the tangency condition is restored. This exercise reinforces that the optimum requires MRS = w, and any deviation from tangency implies the worker can improve her utility by adjusting hours.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-2" class="slide level2" data-background-color="#FFD700">
+<h2></h2>
+<div style="text-align: center;">
+<p><br></p>
+<p><span style="font-size: 2.2em; color: #BF616A;"><strong>Income and Substitution Effects</strong></span></p>
+<p><br></p>
+</div>
+</section>
+<section id="effect-of-a-change-in-non-labour-income-leisure-normal" class="slide level2" data-section="§2-5 · The Hours of Work Decision">
+<h2>Effect of a Change in Non-Labour Income (Leisure Normal)</h2>
+<p><embed data-src="figures/ch2/2-7a-new.pdf" style="width:50.0%"></p>
+<aside class="notes">
+<p>An increase in non-labour income leads to a parallel, upward shift in the budget line — the slope (wage rate) is unchanged but the endowment point moves up. If leisure is a normal good, the worker moves from point P0 to point P1, consuming more leisure and working fewer hours. This is a pure income effect: the worker is richer and “buys” more of everything, including leisure. The assumption that leisure is normal is standard and well-supported empirically — lottery winners and inheritance recipients tend to reduce their work hours.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="effect-of-a-change-in-non-labour-income-leisure-inferior" class="slide level2" data-section="§2-5 · The Hours of Work Decision">
+<h2>Effect of a Change in Non-Labour Income (Leisure Inferior)</h2>
+<p><embed data-src="figures/ch2/2-7b.pdf" style="width:50.0%"></p>
+<aside class="notes">
+<p>In the unusual case where leisure is an inferior good, an increase in non-labour income shifts the budget line up but the worker actually increases hours of work. The new tangency point P1 involves less leisure than P0. While this is theoretically possible, it is empirically uncommon. Most evidence supports the assumption that leisure is a normal good. The distinction matters because it determines the sign of the income effect in the Slutsky decomposition of wage changes.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="effect-of-a-change-in-the-wage-rate" class="slide level2" data-section="§2-5 · The Hours of Work Decision">
+<h2>Effect of a Change in the Wage Rate</h2>
+<p><embed data-src="figures/ch2/2-8a-new.pdf" style="width:55.0%"></p>
+<aside class="notes">
+<p>A change in the wage rate rotates the budget line around the endowment point E. A higher wage makes the budget line steeper — each hour of work now buys more consumption. The worker moves from point P to point R. Whether hours of work increase or decrease depends on the relative magnitudes of the income and substitution effects. When the income effect dominates the substitution effect, the worker increases hours of leisure in response to a wage increase — she is sufficiently richer that she “buys” more leisure despite its higher opportunity cost.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="effect-of-a-change-in-the-wage-rate-on-hours" class="slide level2" data-section="§2-5 · The Hours of Work Decision">
+<h2>Effect of a Change in the Wage Rate on Hours</h2>
+<p><embed data-src="figures/ch2/2-8b-new.pdf" style="width:55.0%"></p>
+<aside class="notes">
+<p>This figure shows the alternative case where the substitution effect dominates. A wage increase makes leisure more expensive relative to consumption, and the worker responds by consuming less leisure and working more hours. The move from P to R involves an increase in hours worked. Whether the income or substitution effect dominates is ultimately an empirical question that differs across individuals and across the wage distribution.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="decomposing-income-and-substitution-effects" class="slide level2" data-section="§2-5 · The Hours of Work Decision">
+<h2>Decomposing Income and Substitution Effects</h2>
+<p><embed data-src="figures/ch2/2-9.pdf" style="width:90.0%"></p>
+<aside class="notes">
+<p>An increase in the wage rate generates both income and substitution effects. The income effect (the move from point P to point Q, along the hypothetical parallel budget line tangent to the original indifference curve) reduces hours of work — the worker is richer and demands more leisure. The substitution effect (the move from Q to R, along the new, steeper budget line) increases hours of work — leisure is now more expensive. The net effect on hours depends on which force is stronger. This Slutsky decomposition is the analytical core of labour supply theory.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="effect-of-wage-increase-on-labor-supply" class="slide level2" data-section="§2-5 · The Hours of Work Decision">
+<h2>Effect of Wage Increase on Labor Supply</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>1. Substitution effect:</strong></p>
+<ul>
+<li>Working more lucrative</li>
+<li>Leisure more “expensive”</li>
+<li>Wage is opportunity cost of leisure</li>
+<li>Households substitute towards lucrative activities and away from expensive activities</li>
+<li><span style="color: #BF616A;"><strong>Work more</strong></span></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>2. Income effect:</strong></p>
+<ul>
+<li>Higher wage means worker is richer</li>
+<li>Richer workers choose more consumption and more leisure</li>
+<li>Leisure is a “normal” good (you buy more of it the richer you are)</li>
+<li>More leisure means less work</li>
+<li><span style="color: #BF616A;"><strong>Work less</strong></span></li>
+</ul>
+</div></div>
+<aside class="notes">
+<p>This side-by-side summary crystallises the two opposing forces. The substitution effect always pushes toward more work when wages rise — leisure has become more expensive relative to consumption. The income effect always pushes toward less work when wages rise — the worker is wealthier and wants more of all normal goods, including leisure. The empirical labour supply literature is essentially an attempt to measure which of these two effects dominates, for whom, and under what circumstances.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="wage-changes-and-hours-of-work-summary-table" class="slide level2" data-section="§2-5 · The Hours of Work Decision">
+<h2>Wage Changes and Hours of Work: Summary Table</h2>
+<p><embed data-src="figures/ch2/tab2-1-cle.pdf" style="width:100.0%"></p>
+<aside class="notes">
+<p>This summary table from Cahuc, Laing, and Ehrenberg neatly organises the predictions. When the substitution effect dominates, hours and wages move in the same direction. When the income effect dominates, they move in opposite directions. The table also distinguishes between changes in the wage rate (which generate both effects) and changes in non-labour income (which generate only an income effect). These predictions form the testable hypotheses that the empirical literature in Section 2-8 attempts to evaluate.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-3" class="slide level2" data-background-color="#FFD700">
+<h2></h2>
+<div style="text-align: center;">
+<p><br></p>
+<p><span style="font-size: 2.2em; color: #BF616A;"><strong>To Work or Not to Work?</strong></span></p>
+<p><br></p>
+</div>
+</section>
+<section id="to-work-or-not-to-work" class="slide level2" data-section="§2-6 · To Work or Not to Work?">
+<h2>To Work or Not to Work?</h2>
+<ul>
+<li><p>Are the “terms of trade” sufficiently attractive to “bribe” a worker to enter the labour market?</p></li>
+<li><p><span style="color: #BF616A;"><strong>Reservation wage:</strong></span> The lowest wage rate that would make the person indifferent between working and not working.</p>
+<ul>
+<li><strong>Rule 1:</strong> If the market wage is less than the reservation wage, the person will not work.</li>
+<li><strong>Rule 2:</strong> The reservation wage increases as non-labour income increases.</li>
+</ul></li>
+</ul>
+<aside class="notes">
+<p>The reservation wage is the critical concept linking the interior solution (positive hours worked) to the corner solution (zero hours worked). It equals the marginal rate of substitution evaluated at the endowment point — that is, how much consumption the worker demands in exchange for the very first hour of work. If the going market wage falls below this threshold, the worker stays out of the labour force entirely. The reservation wage depends on preferences (how much the person values leisure) and non-labour income (the richer you are, the higher the wage must be to tempt you into the labour market).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="labor-supply-and-reservation-wage" class="slide level2" data-section="§2-6 · To Work or Not to Work?">
+<h2>Labor Supply and Reservation Wage</h2>
+<p><embed data-src="figures/ch2/2-10-new1.pdf" style="width:53.0%"></p>
+<aside class="notes">
+<p>The reservation wage (<span class="math inline">\(w^*\)</span>) is the wage rate that makes the worker indifferent between working and not working. Graphically, it is given by the absolute value of the slope of the indifference curve at the endowment point E — the point where the worker consumes all her time as leisure and lives on non-labour income alone. At this point, the worker is evaluating whether the first hour of work is “worth it.”</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="labor-supply-and-reservation-wage-cont." class="slide level2" data-section="§2-6 · To Work or Not to Work?">
+<h2>Labor Supply and Reservation Wage (cont.)</h2>
+<p><embed data-src="figures/ch2/2-10-new2.pdf" style="width:53.0%"></p>
+<aside class="notes">
+<p>The reservation wage can also be interpreted as the minimum income increase that would make the person indifferent between staying at the endowment point E and working the first hour. If the market wage equals the reservation wage, the budget line is just tangent to the indifference curve at E — the worker is on the margin of entering the labour force.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="labor-supply-and-reservation-wage-cont.-1" class="slide level2" data-section="§2-6 · To Work or Not to Work?">
+<h2>Labor Supply and Reservation Wage (cont.)</h2>
+<p><embed data-src="figures/ch2/2-10-new.pdf" style="width:53.0%"></p>
+<aside class="notes">
+<p>When the market wage exceeds the reservation wage, the budget line is steeper than the indifference curve at E, and the worker can reach a higher indifference curve by working positive hours. When the market wage is below the reservation wage, the budget line is flatter than the indifference curve at E, and the worker is better off not working at all. This clean binary prediction — work if <span class="math inline">\(w &gt; w^*\)</span>, don’t work if <span class="math inline">\(w &lt; w^*\)</span> — is the foundation for understanding labour force participation decisions.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-4" class="slide level2" data-background-color="#FFD700">
+<h2></h2>
+<div style="text-align: center;">
+<p><br></p>
+<p><span style="font-size: 2.2em; color: #BF616A;"><strong>The Labor Supply Curve</strong></span></p>
+<p><br></p>
+</div>
+</section>
+<section id="labor-supply-curve" class="slide level2" data-section="§2-7 · The Labor Supply Curve">
+<h2>Labor Supply Curve</h2>
+<ul>
+<li><p>Relationship between <span style="color: #BF616A;"><strong>hours worked</strong></span> and the <span style="color: #BF616A;"><strong>wage rate</strong></span></p></li>
+<li><p>At wages slightly above the reservation wage, the labor supply curve is <span style="color: #BF616A;"><strong>positively sloped</strong></span> (the substitution effect dominates the income effect)</p></li>
+<li><p>If the income effect begins to dominate the substitution effect, hours of work decline as the wage rate increases (a <span style="color: #BF616A;"><strong>negatively sloped</strong></span> labor supply curve)</p></li>
+</ul>
+<aside class="notes">
+<p>The individual labour supply curve maps out the optimal hours of work at every possible wage rate. At very low wages (just above the reservation wage), the worker has little income, so the income effect is small and the substitution effect dominates — higher wages lead to more hours worked. As wages continue to rise, the worker becomes wealthier and the income effect grows stronger. Eventually, the income effect may dominate, causing the supply curve to bend backward. The shape of this curve is one of the most important empirical questions in labour economics.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="your-turn-2" class="slide level2" data-section="§2-7 · The Labor Supply Curve">
+<h2>Your Turn 2</h2>
+<ul>
+<li>Suppose your wage was <span style="color: #BF616A;"><strong>temporarily high</strong></span> for one week. How would this affect your labor supply?
+<ol type="1">
+<li>I would work more</li>
+<li>I would work the same amount</li>
+<li>I would work less</li>
+</ol></li>
+<li>Suppose your wage was <span style="color: #BF616A;"><strong>permanently higher</strong></span>. How would this affect your labor supply?
+<ol type="1">
+<li>I would work more</li>
+<li>I would work the same amount</li>
+<li>I would work less</li>
+</ol></li>
+</ul>
+<aside class="notes">
+<p>A temporary wage increase has a negligible income effect — one week of higher pay barely changes your lifetime wealth. So the response is dominated by the substitution effect, and most people would work more. A permanent wage increase, however, makes you substantially wealthier over your lifetime, generating a large income effect that competes with the substitution effect. Many people would choose to work less (or the same) because the income effect of permanent wealth is strong. This distinction between temporary and permanent wage changes is central to the intertemporal substitution hypothesis discussed later in the chapter.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-backward-bending-labor-supply-curve" class="slide level2" data-section="§2-7 · The Labor Supply Curve">
+<h2>The Backward Bending Labor Supply Curve</h2>
+<p><embed data-src="figures/ch2/2-11-new.pdf" style="width:38.0%"></p>
+<aside class="notes">
+<p>The labour supply curve traces the relationship between the wage rate and hours of work. At wages below the reservation wage ($10 in this example), the person does not work. At wages greater than $10, the person enters the labour market. The upward-sloping segment of the labour supply curve implies that substitution effects are stronger initially — as the wage rises from $10 to $20, hours increase from 0 to 40. The backward-bending segment implies that income effects may dominate eventually — as the wage rises from $20 to $25, hours actually fall from 40 to 30.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-backward-bending-labor-supply-curve-derivation" class="slide level2" data-section="§2-7 · The Labor Supply Curve">
+<h2>The Backward Bending Labor Supply Curve — Derivation</h2>
+<p><embed data-src="figures/ch2/2-11f-new.pdf" style="width:75.0%"></p>
+<aside class="notes">
+<p>The left panel shows the optimal consumption bundles at various wage rates. The reservation wage is $10, where the person is indifferent between working and not working. No labour is supplied for wages at or below $10. Above $10, the person works varying hours: 20 hours at $13, 40 hours at $20, and 30 hours at $25. The right panel maps these wage-hours pairs onto a standard labour supply diagram. Initially, the curve is positively sloped as the substitution effect dominates. Beyond $20, the income effect dominates, leading to declining hours as the wage rises further. This creates the characteristic backward-bending shape.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="labor-supply-elasticity" class="slide level2" data-section="§2-8 · Estimates of the Labor Supply Elasticity">
+<h2>Labor Supply Elasticity</h2>
+<ul>
+<li>The <span style="color: #BF616A;"><strong>labor supply elasticity</strong></span> (<span class="math inline">\(\sigma\)</span>) measures responsiveness in hours worked to changes in the wage rate</li>
+</ul>
+<p><span class="math display">\[\sigma = \frac{\text{Percent change in hours worked}}{\text{Percent change in wage rate}}\]</span></p>
+<ul>
+<li><p>Labor supply elasticity <strong>less than 1</strong> is <span style="color: #BF616A;"><strong>inelastic</strong></span> — hours of work respond proportionally less than the change in wages</p></li>
+<li><p>Labor supply elasticity <strong>greater than 1</strong> is <span style="color: #BF616A;"><strong>elastic</strong></span> — hours of work respond proportionally more than the change in wages</p></li>
+</ul>
+<aside class="notes">
+<p>The labour supply elasticity is the key empirical parameter in this chapter. Decades of research have produced a rough consensus: for prime-age men, the elasticity is small and often slightly negative (around -0.1), consistent with a mildly backward-bending supply curve. For women, the elasticity is positive and larger (around +0.2 to +0.4), meaning women’s hours are more responsive to wage changes. These estimates have enormous policy implications — they determine how much labour supply responds to tax changes, welfare programs, and wage subsidies like the EITC.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="your-turn-4" class="slide level2" data-section="§2-8 · Estimates of the Labor Supply Elasticity">
+<h2>Your Turn 4</h2>
+<p><strong>Suppose an individual’s wage rate decreases and the income effect dominates the substitution effect.</strong></p>
+<ol type="1">
+<li>What will be the impact on the desired hours of work?</li>
+<li>What is the relevant segment of the person’s labor supply curve?</li>
+</ol>
+<aside class="notes">
+<p>When a worker’s wage rate declines and the income effect dominates the substitution effect, the person will work more hours. The logic: a wage decrease makes the worker poorer (income effect pushes toward less leisure, i.e., more work) and also makes leisure cheaper (substitution effect pushes toward more leisure, i.e., less work). If the income effect dominates, the net result is more work. The relevant segment of the labor supply curve is the backward-bending portion — where wages and hours move in opposite directions.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-5" class="slide level2" data-background-color="#FFD700">
+<h2></h2>
+<div style="text-align: center;">
+<p><br></p>
+<p><span style="font-size: 2.5em; color: #BF616A;"><strong>Policy Applications</strong></span></p>
+<p><br></p>
+</div>
+</section>
+<section id="welfare-programs-and-work-incentives" class="slide level2" data-section="§2-11 · Welfare Programs &amp; Work Incentives">
+<h2>Welfare Programs and Work Incentives</h2>
+<ul>
+<li><p>Cash grants reduce wage incentives</p></li>
+<li><p>Welfare programs create <span style="color: #BF616A;"><strong>work disincentives</strong></span> (especially for low-wage earners)</p></li>
+<li><p>Welfare reduces the supply of labor by increasing non-labour income, which <span style="color: #BF616A;"><strong>raises the reservation wage</strong></span></p></li>
+</ul>
+<aside class="notes">
+<p>Welfare programs are the most direct policy application of the labour-leisure model. A cash transfer to non-workers raises non-labour income, shifting the budget line up and increasing the reservation wage. If the transfer is conditional on not working (a “take-it-or-leave-it” grant), it creates a stark discontinuity in the opportunity set. If earnings are taxed against the grant, both income and substitution effects push toward fewer hours worked. This analysis explains why means-tested welfare programs have historically been criticised for reducing labour supply among the poor.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="effect-of-a-cash-grant-on-work-incentives" class="slide level2" data-section="§2-11 · Welfare Programs &amp; Work Incentives">
+<h2>Effect of a Cash Grant on Work Incentives</h2>
+<p><embed data-src="figures/ch2/2-16-new.pdf" style="width:70.0%"></p>
+<aside class="notes">
+<p>Opposition to welfare stems from the belief that it fosters dependency. Consider a take-it-or-leave-it cash grant of $1,000 per month for non-workers. If you enter the labour force, you lose the entire grant regardless of your earnings. Without the program, the budget line FE gives an interior solution at point P — the worker enjoys 70 hours of leisure and works 40 hours. With the $1,000 grant, point G is added to the opportunity set. The woman receives $1,000 if she does not work. If she enters the labour market, the grant is revoked and she returns to the original budget line FE. For some workers, G will lie on a higher indifference curve than P, and they will choose not to work.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="effect-of-a-welfare-program-on-hours-1000-cash-50-tax" class="slide level2" data-section="§2-11 · Welfare Programs &amp; Work Incentives">
+<h2>Effect of a Welfare Program on Hours: $1,000 Cash, 50% Tax</h2>
+<p><embed data-src="figures/ch2/2-17-1-new.pdf" style="width:70.0%"></p>
+<aside class="notes">
+<p>This figure introduces a more realistic welfare program where benefits are reduced gradually rather than eliminated all at once. The program provides a $1,000 cash grant but imposes a 50% tax on earnings — for every dollar earned, the grant is reduced by 50 cents. Without welfare, the worker is at point P. The welfare program generates both income and substitution effects, both of which reduce work hours. The income effect arises from the cash grant itself (the shift from E to G as the endowment point), and the substitution effect arises from the implicit 50% tax rate, which halves the net wage.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="effect-of-a-welfare-program-on-hours-cont." class="slide level2" data-section="§2-11 · Welfare Programs &amp; Work Incentives">
+<h2>Effect of a Welfare Program on Hours (cont.)</h2>
+<p><embed data-src="figures/ch2/2-17-new2.pdf" style="width:70.0%"></p>
+<aside class="notes">
+<p>The welfare program shifts the endowment from E to G — a $1,000 non-work grant. The net wage drops from $10 to $5, reflected in the flatter slope of the new budget line HG. The cash grant combined with the earnings tax must decrease work hours unambiguously: the income effect moves the worker from P to Q (more leisure due to higher income), and the substitution effect moves from Q to R (even more leisure because the effective wage is halved by the 50% tax).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="effect-of-a-welfare-program-on-hours-cont.-1" class="slide level2" data-section="§2-11 · Welfare Programs &amp; Work Incentives">
+<h2>Effect of a Welfare Program on Hours (cont.)</h2>
+<p><embed data-src="figures/ch2/2-17-new3.pdf" style="width:70.0%"></p>
+<aside class="notes">
+<p>The hypothetical budget line DD is drawn parallel to the pre-welfare budget line and tangent to the new indifference curve. This isolates the pure income effect — the move from P to Q — showing what would happen if only the cash grant were provided without any implicit tax. The remaining move from Q to R captures the pure substitution effect of the 50% earnings tax. Both effects reinforce each other in reducing hours of work, which is why this type of welfare program unambiguously discourages labour supply.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="effect-of-a-welfare-program-on-hours-cont.-2" class="slide level2" data-section="§2-11 · Welfare Programs &amp; Work Incentives">
+<h2>Effect of a Welfare Program on Hours (cont.)</h2>
+<p><embed data-src="figures/ch2/2-17-new4.pdf" style="width:70.0%"></p>
+<aside class="notes">
+<p>The income effect increases leisure: Q lies to the right of P, showing that the cash grant alone causes the worker to consume more leisure. The substitution effect then moves the worker further right, from Q to R: the 50% earnings tax halves the price of leisure (in terms of forgone after-tax earnings), boosting leisure demand further. The combined effect is unambiguously negative for labour supply — the worker at R works fewer hours than at P.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="effect-of-a-welfare-program-on-hours-cont.-3" class="slide level2" data-section="§2-11 · Welfare Programs &amp; Work Incentives">
+<h2>Effect of a Welfare Program on Hours (cont.)</h2>
+<p><embed data-src="figures/ch2/2-17-new6.pdf" style="width:70.0%"></p>
+<aside class="notes">
+<p>This final panel shows the complete decomposition. The income effect from the cash grant moves the worker from P to Q. The substitution effect from the 50% implicit tax rate moves the worker from Q to R. Both effects push in the same direction — toward more leisure and fewer hours of work. This is the fundamental insight: welfare programs that combine a cash grant with an earnings tax create doubly reinforced work disincentives. This analysis motivated the shift toward “making work pay” programs like the EITC.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-6" class="slide level2" data-background-color="#FFD700">
+<h2></h2>
+<div style="text-align: center;">
+<p><br></p>
+<p><span style="font-size: 2.2em; color: #BF616A;"><strong>The Earned Income Tax Credit</strong></span></p>
+<p><br></p>
+</div>
+</section>
+<section id="the-earned-income-tax-credit-eitc" class="slide level2" data-section="§2-12 · The Earned Income Tax Credit">
+<h2>The Earned Income Tax Credit (EITC)</h2>
+<ul>
+<li><p>Since 1975, a major financial boost for low-income working individuals (e.g., working mother with two qualifying children)</p></li>
+<li><p>By 2015, the leading US cash-benefit program, disbursing nearly <span style="color: #BF616A;"><strong>$70 billion</strong></span></p></li>
+<li><p>In 2017, EITC offers up to <span style="color: #BF616A;"><strong>40% tax credit</strong></span> on earnings, maxing at $5,616 for income up to $14,040</p></li>
+<li><p>Eligible for this maximum credit as long as earnings are between $14,040 and $18,340</p></li>
+<li><p>Credit phases out after $18,340, reducing by <span style="color: #BF616A;"><strong>21.06 cents</strong></span> for each additional dollar earned — fully phased out at $45,007</p></li>
+</ul>
+<aside class="notes">
+<p>The EITC is the mirror image of the welfare programs just discussed. Instead of paying people not to work, it pays people to work. The credit has three phases: the subsidy phase (where each dollar earned is topped up by 40 cents), the plateau phase (where the credit stays at its maximum of $5,616), and the phase-out range (where the credit is reduced by 21.06 cents for each additional dollar earned). This design was deliberately chosen to encourage labour force participation while maintaining some redistribution. The EITC has become the largest anti-poverty program in the US, dwarfing traditional welfare.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="eitc-calculation-phase-in" class="slide level2" data-section="§2-12 · The Earned Income Tax Credit">
+<h2>EITC Calculation: Phase-In</h2>
+<ul>
+<li class="fragment"><p>For every dollar earned, she gets <span style="color: #BF616A;"><strong>40 cents</strong></span> as a tax credit</p></li>
+<li class="fragment"><p>If she earns $10,000 → Credit = $4,000</p></li>
+<li class="fragment"><p>If she earns $14,040 → Credit = <span style="color: #BF616A;"><strong>$5,616</strong></span> (maximum)</p></li>
+<li class="fragment"><p>Earnings $14,040 to $18,340: receives the full maximum credit of $5,616</p></li>
+</ul>
+<aside class="notes">
+<p>The phase-in region of the EITC effectively subsidises work at a 40% rate. A worker earning $10,000 receives $4,000 in credit, bringing her total income to $14,000. At $14,040 in earnings, the credit reaches its maximum of $5,616. Between $14,040 and $18,340, the credit remains flat at $5,616 regardless of earnings — this is the plateau region. In the phase-in region, the net wage is 1.4 times the gross wage, creating a powerful incentive to enter the labour force and work at least some hours.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="eitc-calculation-phase-out" class="slide level2 smaller" data-section="§2-12 · The Earned Income Tax Credit">
+<h2>EITC Calculation: Phase-Out</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 27%">
+<col style="width: 14%">
+<col style="width: 36%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Earnings</th>
+<th>Excess of $18,340</th>
+<th>Tax per $</th>
+<th>Deduction from Max Credit</th>
+<th>EITC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>19,000</td>
+<td>660</td>
+<td>0.2106</td>
+<td>139.00</td>
+<td>5,477</td>
+</tr>
+<tr class="even">
+<td>25,000</td>
+<td>6,660</td>
+<td>0.2106</td>
+<td>1,402.60</td>
+<td>4,213</td>
+</tr>
+<tr class="odd">
+<td>31,000</td>
+<td>12,660</td>
+<td>0.2106</td>
+<td>2,666.20</td>
+<td>2,950</td>
+</tr>
+<tr class="even">
+<td>37,000</td>
+<td>18,660</td>
+<td>0.2106</td>
+<td>3,929.80</td>
+<td>1,686</td>
+</tr>
+<tr class="odd">
+<td>43,000</td>
+<td>24,660</td>
+<td>0.2106</td>
+<td>5,193.40</td>
+<td>423</td>
+</tr>
+<tr class="even">
+<td>45,007</td>
+<td>26,667</td>
+<td>0.2106</td>
+<td>5,616.07</td>
+<td>≈ 0</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>The EITC is fully phased out at $45,007 in earnings. The phase-out rate of 21.06% means that for every additional dollar earned above $18,340, the credit is reduced by about 21 cents. This creates an implicit marginal tax rate of 21.06% in the phase-out range, on top of any other income taxes the worker faces. For workers in this range, the substitution effect of the phase-out discourages additional hours of work. The table shows the arithmetic clearly: at $25,000, the worker still receives $4,213, but by $43,000, the credit has shrunk to just $423.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-eitc-and-the-budget-line" class="slide level2" data-section="§2-12 · The Earned Income Tax Credit">
+<h2>The EITC and the Budget Line</h2>
+<p><embed data-src="figures/ch2/2-18-new1.pdf" style="width:75.0%"></p>
+<aside class="notes">
+<p>Above $18,340, the EITC phases out at 21.06 cents per dollar. A worker earning $10 per hour at $18,340 who works an extra hour earns $10 gross but loses $2.11 in EITC, yielding a net wage of $7.89 per hour. This is represented by segment GH of the budget line, which is flatter than the original no-EITC budget line. At $45,007, the EITC is fully phased out and the budget line reverts to its original slope (segment FG). The figure assumes zero non-labour income.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-eitc-and-the-budget-line-cont." class="slide level2" data-section="§2-12 · The Earned Income Tax Credit">
+<h2>The EITC and the Budget Line (cont.)</h2>
+<p><embed data-src="figures/ch2/2-18-new2.pdf" style="width:75.0%"></p>
+<aside class="notes">
+<p>In the plateau phase ($14,040 to $18,340), the EITC does not change the net wage — it generates a pure income effect. The worker receives a flat $5,616 boost regardless of exactly how many hours she works within this range. This is represented by segment HJ of the budget line, which is parallel to the original budget line but shifted up by $5,616. Since the net wage is unchanged, there is no substitution effect — only an income effect, which (if leisure is normal) reduces hours of work.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-eitc-and-the-budget-line-cont.-1" class="slide level2" data-section="§2-12 · The Earned Income Tax Credit">
+<h2>The EITC and the Budget Line (cont.)</h2>
+<p><embed data-src="figures/ch2/2-18-new.pdf" style="width:75.0%"></p>
+<aside class="notes">
+<p>The complete EITC budget line has a distinctive kinked shape with three segments. In the phase-in region, the net wage exceeds the gross wage (the budget line is steeper), creating both income and substitution effects that encourage work. In the plateau, the net wage equals the gross wage but income is higher, creating only an income effect. In the phase-out, the net wage is below the gross wage, with an income effect encouraging less work and a substitution effect also encouraging less work. The key policy insight is that the EITC unambiguously encourages labour force participation (entering the labour force is always rewarded) even though its effect on hours for those already working is ambiguous.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-does-the-eitc-affect-labor-supply" class="slide level2" data-section="§2-12 · The Earned Income Tax Credit">
+<h2>How Does the EITC Affect Labor Supply?</h2>
+<ul>
+<li><p>The EITC should <span style="color: #BF616A;"><strong>increase labor force participation</strong></span> of non-workers in targeted groups</p></li>
+<li><p>The EITC encourages some non-workers to start working and <span style="color: #BF616A;"><strong>never</strong></span> encourages a worker to quit working</p></li>
+<li><p>The EITC produces an <span style="color: #BF616A;"><strong>income effect</strong></span> for all recipients</p></li>
+<li><p>Hours worked should change — the direction depends on which phase the worker is in</p></li>
+</ul>
+<aside class="notes">
+<p>The EITC’s participation effect is its strongest and most unambiguous prediction. For someone currently not working, the EITC raises the return to the first hour of work by 40%, making it more likely that the market wage exceeds the reservation wage. Importantly, the EITC never makes it optimal to quit working entirely — at zero hours, you get zero credit, so there is always some incentive to work at least a little. Empirical evidence strongly confirms the participation prediction: Eissa and Liebman (1996) found that the 1986 EITC expansion increased single mothers’ labour force participation by 2.8 percentage points. The hours effect is more nuanced and depends on the worker’s position along the budget constraint.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-7" class="slide level2" data-background-color="#FFD700">
+<h2></h2>
+<div style="text-align: center;">
+<p><br></p>
+<p><span style="font-size: 2.2em; color: #BF616A;"><strong>Labor Supply over the Life Cycle</strong></span></p>
+<p><br></p>
+</div>
+</section>
+<section id="labor-supply-over-the-life-cycle" class="slide level2" data-section="§2-13 · Labor Supply over the Life Cycle">
+<h2>Labor Supply Over the Life Cycle</h2>
+<ul>
+<li><p>Wage rates change over the worker’s life (over the <span style="color: #BF616A;"><strong>life cycle</strong></span>)</p></li>
+<li><p>Wages are low when young</p></li>
+<li><p>Wages rise with time and peak around <span style="color: #BF616A;"><strong>age 50</strong></span></p></li>
+<li><p>Wages decline or remain stable after age 50</p></li>
+<li><p>The changes in wages over the life cycle are <span style="color: #BF616A;"><strong>“evolutionary” wage changes</strong></span> that alter the price of leisure</p></li>
+</ul>
+<aside class="notes">
+<p>Until now, we have analysed the labour supply decision in a single-period framework. But workers make labour supply decisions continuously over their entire careers, and the wage they face changes predictably as they age. Young workers earn relatively little, wages rise as they accumulate experience and human capital, peak in middle age, and then plateau or decline. These predictable, career-long wage changes are “evolutionary” — they change the price of leisure at different life stages without necessarily changing the worker’s lifetime wealth. This distinction between evolutionary and unexpected wage changes is central to the intertemporal substitution hypothesis.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="theoretical-issues-of-evolutionary-wages" class="slide level2" data-section="§2-13 · Labor Supply over the Life Cycle">
+<h2>Theoretical Issues of Evolutionary Wages</h2>
+<ul>
+<li class="fragment"><p>A person will work more hours when wages are higher (that is, the substitution effect tends to dominate the income effect)</p></li>
+<li class="fragment"><p>The profile of hours of work over the life cycle will have the <span style="color: #BF616A;"><strong>same shape</strong></span> as the age-earnings profile</p></li>
+<li class="fragment"><p><span style="color: #BF616A;"><strong>Inter-temporal substitution hypothesis:</strong></span> people substitute their time over the life cycle to take advantage of changes in the price of leisure</p></li>
+</ul>
+<aside class="notes">
+<p>The intertemporal substitution hypothesis is an elegant prediction: since evolutionary wage changes do not alter lifetime wealth (they are predictable and already factored into the worker’s life plan), they generate only a substitution effect. There is no income effect because the worker is not surprised by the wage change. This means the substitution effect dominates, and workers should work more hours when wages are high and fewer hours when wages are low. The testable implication is that hours of work should track the age-earnings profile — rising when young, peaking at 50, and declining thereafter.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-life-cycle-path-of-wages-and-hours" class="slide level2" data-section="§2-13 · Labor Supply over the Life Cycle">
+<h2>The Life Cycle Path of Wages and Hours</h2>
+<p><embed data-src="figures/ch2/2-20-new.pdf" style="width:100.0%"></p>
+<aside class="notes">
+<p>This figure shows the parallel paths of wages and hours over a typical worker’s career. The age-earnings profile rises rapidly when the worker is young, peaks around age 50, and then stabilises or declines. The intertemporal substitution hypothesis predicts that the hours-of-work profile should have the same hump shape — and broadly, it does. Workers in their prime earning years tend to work the longest hours. Younger workers work less (partly because of schooling and lower wages), and older workers reduce hours as wages plateau and retirement approaches. The current single-period model overlooks this continuous career-long decision-making. Workers are not simply choosing hours today — they are trading today’s leisure for tomorrow’s consumption across their entire working life.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="hours-of-work-over-the-life-cycle-different-wage-paths" class="slide level2" data-section="§2-13 · Labor Supply over the Life Cycle">
+<h2>Hours of Work Over the Life Cycle: Different Wage Paths</h2>
+<p><embed data-src="figures/ch2/2-21-new.pdf" style="width:100.0%"></p>
+<aside class="notes">
+<p>Joe’s wage consistently exceeds Jack’s at every age. Both work more when wages are high, as the intertemporal substitution hypothesis predicts. But whether Joe works more or fewer total hours than Jack is ambiguous. Joe faces a higher wage at every age (substitution effect: work more), but his higher lifetime income means he is wealthier (income effect: consume more leisure). If the substitution effect dominates, Joe works more hours than Jack at every age. If the income effect dominates, Joe may actually work fewer hours despite his higher wage. This cross-section comparison introduces income effects that are absent from the within-person evolutionary analysis — a crucial distinction for empirical work.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="labor-force-participation-rates-over-the-life-cycle-2017" class="slide level2" data-section="§2-13 · Labor Supply over the Life Cycle">
+<h2>Labor Force Participation Rates Over the Life Cycle, 2017</h2>
+<p><embed data-src="figures/ch2/2-23-new.pdf" style="width:85.0%"></p>
+<aside class="notes">
+<p>This figure from the CPS shows labour force participation rates by age for men and women in 2017. The patterns are broadly consistent with the life cycle model: participation rises sharply in the early twenties (as people leave school), plateaus during prime working years (25-54), and declines after 55 as workers approach retirement. The gender gap in participation has narrowed considerably over time but remains visible, especially during childbearing years. The steep decline after 60 reflects both the availability of retirement benefits and the declining evolutionary wage for older workers.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="labor-supply-over-the-business-cycle-added-worker-effect" class="slide level2" data-section="§2-13 · Labor Supply over the Life Cycle">
+<h2>Labor Supply Over the Business Cycle: Added Worker Effect</h2>
+<ul>
+<li class="fragment"><p>So-called “secondary” workers currently out of the labor market are affected by a recession because the main breadwinner becomes unemployed or faces a wage cut</p></li>
+<li class="fragment"><p>A secondary worker may choose to <span style="color: #BF616A;"><strong>enter the labor force</strong></span> during these bad times</p></li>
+<li class="fragment"><p>The labor force participation rate of secondary workers (the <span style="color: #BF616A;"><strong>added worker effect</strong></span>) is <span style="color: #BF616A;"><strong>counter-cyclical</strong></span></p></li>
+</ul>
+<aside class="notes">
+<p>The added worker effect extends the labour supply model to household decisions during recessions. When the primary earner loses a job or takes a pay cut, the household’s non-labour income effectively falls. This reduction in income raises the secondary worker’s incentive to enter the labour force — the reservation wage drops because the household needs the income. The prediction is counter-cyclical: participation of secondary workers rises during downturns. Empirically, the added worker effect exists but is generally found to be small, likely because many secondary workers also face poor job prospects during recessions.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="labor-supply-over-the-business-cycle-discouraged-worker-effect" class="slide level2" data-section="§2-13 · Labor Supply over the Life Cycle">
+<h2>Labor Supply Over the Business Cycle: Discouraged Worker Effect</h2>
+<ul>
+<li class="fragment"><p>Unemployed workers find it very difficult to find jobs during a recession, so they <span style="color: #BF616A;"><strong>give up searching</strong></span></p></li>
+<li class="fragment"><p>Discouraged workers <span style="color: #BF616A;"><strong>exit the labor force</strong></span> during bad times</p></li>
+<li class="fragment"><p>The labor force participation rate of discouraged workers is <span style="color: #BF616A;"><strong>pro-cyclical</strong></span></p></li>
+</ul>
+<aside class="notes">
+<p>The discouraged worker effect works in the opposite direction to the added worker effect. During a recession, job prospects deteriorate and the expected wage from searching falls. As the perceived market wage drops below the reservation wage, some workers stop searching entirely and leave the labour force. They are not counted as unemployed because they are no longer actively looking for work. This means the official unemployment rate understates the true labour market slack during recessions. The discouraged worker effect is pro-cyclical — participation falls during downturns and rises during expansions.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="labor-supply-over-the-business-cycle-net-effect" class="slide level2" data-section="§2-13 · Labor Supply over the Life Cycle">
+<h2>Labor Supply Over the Business Cycle: Net Effect</h2>
+<ul>
+<li class="fragment"><p>The <span style="color: #BF616A;"><strong>discouraged worker effect dominates</strong></span> the added worker effect, especially during recessions</p></li>
+<li class="fragment"><p>The Labor Force Participation Rate is <span style="color: #BF616A;"><strong>pro-cyclical</strong></span></p></li>
+</ul>
+<aside class="notes">
+<p>The empirical evidence clearly shows that the discouraged worker effect is larger than the added worker effect. During recessions, the overall labour force participation rate falls — more people exit the labour force than enter it. This has important implications for measuring the true state of the labour market. The unemployment rate, which only counts people actively searching for work, systematically understates slack during downturns because it misses the discouraged workers who have dropped out entirely. The employment-population ratio is often a better cyclical indicator precisely because it captures this margin.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="summary" class="slide level2" data-section="§2-7 · The Labor Supply Curve">
+<h2>Summary</h2>
+<ul>
+<li class="fragment"><p>An increase in the wage generates both an <span style="color: #BF616A;"><strong>income</strong></span> and a <span style="color: #BF616A;"><strong>substitution</strong></span> effect</p></li>
+<li class="fragment"><p>The labor supply elasticity is on the order of <span style="color: #BF616A;"><strong>-0.1 for men</strong></span> and <span style="color: #BF616A;"><strong>+0.2 for women</strong></span></p></li>
+<li class="fragment"><p>Welfare programs create work disincentives because they provide cash grants to participants as well as tax those recipients who enter the labor market. In contrast, credits on earned income create work incentives and draw many non-workers into the labor force.</p></li>
+</ul>
+<aside class="notes">
+<p>The three key takeaways from Chapter 2 are: first, every wage change generates competing income and substitution effects, and the net impact on hours worked is an empirical question. Second, the empirical evidence suggests that men’s labour supply is quite inelastic (slightly backward-bending), while women’s is more elastic and upward-sloping. Third, the design of transfer programs matters enormously — welfare programs that tax earnings create double disincentives (income and substitution effects both reduce work), while the EITC’s subsidy phase creates powerful participation incentives. These insights have directly shaped the evolution of US anti-poverty policy from welfare toward work-based programs.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="self-study-optional-topics" class="slide level2">
+<h2>Self Study / Optional Topics</h2>
+<ul>
+<li>The labor supply curve in the aggregate labor market</li>
+<li>§2-8 <span style="color: #BF616A;"><strong>Estimates of the Labor Supply Elasticity</strong></span> (pp 41)</li>
+<li>§2-9 Household Production (pp 44)</li>
+<li>§2-10 <span style="color: #BF616A;"><strong>Correlation versus Causation: Searching for Random Shocks</strong></span></li>
+<li><span style="color: #BF616A;"><strong>How does the EITC affect labor supply?</strong></span></li>
+<li>§2-14 Policy Application: Disability Benefits and Labor Force Participation</li>
+</ul>
+<aside class="notes">
+<p>These topics are assigned for self-study. The labour supply elasticity estimates in Section 2-8 are essential reading — they provide the empirical foundation for everything discussed in class. Section 2-10 on correlation versus causation introduces the idea of natural experiments and instrumental variables in the context of labour supply, which is crucial methodological background. The EITC’s effect on labour supply is covered in the empirical literature reviewed in the chapter and connects directly to our policy discussion.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="thanks-folks" class="slide level2 smaller">
+<h2>Thanks Folks!</h2>
+
+<img data-src="figures/misc/swan.png" style="width:55.0%" class="r-stretch"><p>You can’t outperform your attitude.</p>
+<p>What you believe about the <strong>work</strong> shows up in how you do the work, and how you do the work determines your results.</p>
+<p>Fix the attitude first. Everything else follows.</p>
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="ch2-supply-v1_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="ch2-supply-v1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="ch2-supply-v1_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="ch2-supply-v1_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="ch2-supply-v1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="ch2-supply-v1_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="ch2-supply-v1_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="ch2-supply-v1_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="ch2-supply-v1_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="ch2-supply-v1_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="ch2-supply-v1_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 0.6,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 6.0e-2,
+
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+
+        maxScale: 2,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
+            }
+            return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    <script src="scroll-nav.js"></script>
+    <script src="chalkboard-bridge.js"></script>
+    
+
+</body></html>

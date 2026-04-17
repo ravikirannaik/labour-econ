@@ -77,50 +77,13 @@ nav:
   - How to Use: how-to-use.md
   - Chapters:
       - Overview: chapters/index.md
-      - "1. Introduction":
-          - Content: chapters/01-introduction/index.md
-          - Practice: chapters/01-introduction/practice.md
-          - Resources: chapters/01-introduction/resources.md
-      - "2. Labor Supply":
-          - Content: chapters/02-labor-supply/index.md
-          - Practice: chapters/02-labor-supply/practice.md
-          - Resources: chapters/02-labor-supply/resources.md
-      - "3. Labor Demand":
-          - Content: chapters/03-labor-demand/index.md
-          - Practice: chapters/03-labor-demand/practice.md
-          - Resources: chapters/03-labor-demand/resources.md
-      - "4. Equilibrium":
-          - Content: chapters/04-equilibrium/index.md
-          - Practice: chapters/04-equilibrium/practice.md
-          - Resources: chapters/04-equilibrium/resources.md
-      - "5. Compensating Differentials":
-          - Content: chapters/05-compensating-differentials/index.md
-          - Practice: chapters/05-compensating-differentials/practice.md
-          - Resources: chapters/05-compensating-differentials/resources.md
-      - "6. Education":
-          - Content: chapters/06-education/index.md
-          - Practice: chapters/06-education/practice.md
-          - Resources: chapters/06-education/resources.md
-      - "7. Wage Distribution":
-          - Content: chapters/07-wage-distribution/index.md
-          - Practice: chapters/07-wage-distribution/practice.md
-          - Resources: chapters/07-wage-distribution/resources.md
-      - "8. Mobility":
-          - Content: chapters/08-mobility/index.md
-          - Practice: chapters/08-mobility/practice.md
-          - Resources: chapters/08-mobility/resources.md
-      - "9. Discrimination":
-          - Content: chapters/09-discrimination/index.md
-          - Practice: chapters/09-discrimination/practice.md
-          - Resources: chapters/09-discrimination/resources.md
-      - "10. Incentive Pay":
-          - Content: chapters/10-incentive-pay/index.md
-          - Practice: chapters/10-incentive-pay/practice.md
-          - Resources: chapters/10-incentive-pay/resources.md
-      - "11. Unemployment":
-          - Content: chapters/11-unemployment/index.md
-          - Practice: chapters/11-unemployment/practice.md
-          - Resources: chapters/11-unemployment/resources.md
+      - "1. Introduction": chapters/01-introduction/index.md
+      - "2. Labor Supply": chapters/02-labor-supply/index.md
+      - "5. Compensating Differentials": chapters/05-compensating-differentials/index.md
+      - "6. Education": chapters/06-education/index.md
+      - "9. Discrimination": chapters/09-discrimination/index.md
+      - "12. Unemployment": chapters/11-unemployment/index.md
+  - Exam Format: exam-format.md
   - Indian Context:
       - Overview: indian-context/index.md
       - "PLFS Data Guide": indian-context/plfs-overview.md
