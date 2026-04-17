@@ -82,7 +82,7 @@ nav:
       - "6. Education": chapters/06-education/index.md
       - "9. Discrimination": chapters/09-discrimination/index.md
       - "12. Unemployment": chapters/11-unemployment/index.md
-  - Exam Format: exam-format.md
+  - "Exam Format: End Term Pattern": exam-format.md
   - Indian Context:
       - Overview: indian-context/index.md
       - "PLFS Data Guide": indian-context/plfs-overview.md

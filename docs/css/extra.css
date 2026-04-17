@@ -280,7 +280,7 @@
 .md-tabs__link[href="./exam-format/"],
 .md-tabs__link[href="../exam-format/"],
 .md-tabs__link[href="exam-format/"] {
-  background: var(--flame-orange) !important;
+  background: var(--flame-blue) !important;
   color: white !important;
   border-radius: 4px;
   font-weight: 700;
@@ -290,7 +290,7 @@
 .md-nav__link[href="exam-format/"],
 .md-nav__link[href="./exam-format/"],
 .md-nav__link[href="../exam-format/"] {
-  color: var(--flame-orange) !important;
+  color: var(--flame-blue) !important;
   font-weight: 700;
 }
 
