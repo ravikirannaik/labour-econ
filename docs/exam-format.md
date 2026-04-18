@@ -4,6 +4,10 @@ description: "Structure and format of the ECON207 end-term examination"
 ---
 #
 **Economics does NOT lend itself to pulling all-nighters before exams**
+I don’t want you to simply regurgitate the material. I want to test whether you have a good understanding of the models and concepts. Are you able to apply the models and concepts we taught you to new settings and scenarios? If so, then you have a good mastery. Mastery is often seen as the ability to
+apply what you’ve learned to new situations or to solve new kinds of problems.
+
+A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away: Antoine de Saint-Exupéry
 # Exam Format: End Term Pattern
 
 **Total Marks: 75** | **4 Sections (A–D)** | **Syllabus: Ch 2, 5, 6, 9, 12**
