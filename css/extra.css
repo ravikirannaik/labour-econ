@@ -1,0 +1,350 @@
+/* ============================================================
+   Labour Economics — ECON207
+   Custom CSS — FLAME Red primary, FLAME Blue accent
+   ============================================================ */
+
+/* ---------- FLAME Colour Variables ---------- */
+
+:root {
+  --md-primary-fg-color: #F01928;
+  --md-primary-fg-color--light: #F56B76;
+  --md-primary-fg-color--dark: #C01420;
+  --md-accent-fg-color: #0000DC;
+  --md-accent-fg-color--transparent: rgba(0, 0, 220, 0.1);
+  --flame-red: #F01928;
+  --flame-blue: #0000DC;
+  --flame-blue-deep: #08116F;
+  --flame-orange: #F58817;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #F56B76;
+  --md-primary-fg-color--light: #F89DA5;
+  --md-primary-fg-color--dark: #F01928;
+  --md-accent-fg-color: #6B6BFF;
+  --md-accent-fg-color--transparent: rgba(107, 107, 255, 0.15);
+}
+
+/* ---------- Headings ---------- */
+
+.md-typeset h1,
+.md-typeset h2 {
+  color: var(--flame-red);
+}
+
+.md-typeset h3 {
+  color: var(--flame-blue-deep);
+}
+
+/* ---------- Custom Admonitions ---------- */
+
+/* Model — FLAME Blue */
+.md-typeset .admonition.model,
+.md-typeset details.model {
+  border-color: var(--flame-blue);
+}
+.md-typeset .model > .admonition-title,
+.md-typeset .model > summary {
+  background-color: rgba(0, 0, 220, 0.1);
+  border-color: var(--flame-blue);
+}
+.md-typeset .model > .admonition-title::before,
+.md-typeset .model > summary::before {
+  background-color: var(--flame-blue);
+  -webkit-mask-image: var(--md-admonition-icon--example);
+  mask-image: var(--md-admonition-icon--example);
+}
+
+/* Empirical — Teal */
+.md-typeset .admonition.empirical,
+.md-typeset details.empirical {
+  border-color: #009688;
+}
+.md-typeset .empirical > .admonition-title,
+.md-typeset .empirical > summary {
+  background-color: rgba(0, 150, 136, 0.1);
+  border-color: #009688;
+}
+.md-typeset .empirical > .admonition-title::before,
+.md-typeset .empirical > summary::before {
+  background-color: #009688;
+  -webkit-mask-image: var(--md-admonition-icon--info);
+  mask-image: var(--md-admonition-icon--info);
+}
+
+/* Indian Context — FLAME Red */
+.md-typeset .admonition.indian,
+.md-typeset details.indian {
+  border-color: var(--flame-red);
+}
+.md-typeset .indian > .admonition-title,
+.md-typeset .indian > summary {
+  background-color: rgba(240, 25, 40, 0.08);
+  border-color: var(--flame-red);
+}
+.md-typeset .indian > .admonition-title::before,
+.md-typeset .indian > summary::before {
+  background-color: var(--flame-red);
+  -webkit-mask-image: var(--md-admonition-icon--tip);
+  mask-image: var(--md-admonition-icon--tip);
+}
+
+/* Stata — Dark Gray */
+.md-typeset .admonition.stata,
+.md-typeset details.stata {
+  border-color: #37474f;
+}
+.md-typeset .stata > .admonition-title,
+.md-typeset .stata > summary {
+  background-color: rgba(55, 71, 79, 0.1);
+  border-color: #37474f;
+}
+.md-typeset .stata > .admonition-title::before,
+.md-typeset .stata > summary::before {
+  background-color: #37474f;
+  -webkit-mask-image: var(--md-admonition-icon--quote);
+  mask-image: var(--md-admonition-icon--quote);
+}
+
+/* Policy — Orange */
+.md-typeset .admonition.policy,
+.md-typeset details.policy {
+  border-color: var(--flame-orange);
+}
+.md-typeset .policy > .admonition-title,
+.md-typeset .policy > summary {
+  background-color: rgba(245, 136, 23, 0.1);
+  border-color: var(--flame-orange);
+}
+.md-typeset .policy > .admonition-title::before,
+.md-typeset .policy > summary::before {
+  background-color: var(--flame-orange);
+  -webkit-mask-image: var(--md-admonition-icon--warning);
+  mask-image: var(--md-admonition-icon--warning);
+}
+
+/* ---------- Chapter Cards ---------- */
+
+.chapter-card {
+  border-left: 4px solid var(--flame-red);
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+  background: var(--md-code-bg-color);
+  border-radius: 0 8px 8px 0;
+}
+
+.chapter-card h3 {
+  margin-top: 0;
+  color: var(--flame-blue-deep);
+}
+
+.chapter-tag {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 0.3rem;
+}
+
+.hours-tag {
+  background: rgba(0, 0, 220, 0.1);
+  color: var(--flame-blue);
+}
+
+.borjas-tag {
+  background: rgba(240, 25, 40, 0.1);
+  color: var(--flame-red);
+}
+
+/* ---------- Quiz / Practice: Upper-alpha lists ---------- */
+
+.upper-alpha > ol {
+  list-style-type: upper-alpha;
+}
+
+/* ---------- iframes (for embedded slides) ---------- */
+
+.md-typeset iframe {
+  width: 100%;
+  border: 2px solid var(--flame-red);
+  border-radius: 8px;
+}
+
+/* ---------- Chapter Reading (collapsible) ---------- */
+
+.chapter-reading {
+  border: 2px solid var(--flame-blue);
+  border-radius: 8px;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.chapter-reading > summary {
+  cursor: pointer;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--flame-blue-deep);
+  background: rgba(0, 0, 220, 0.06);
+  border-radius: 6px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chapter-reading > summary::-webkit-details-marker {
+  display: none;
+}
+
+.chapter-reading > summary::before {
+  content: "▶";
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.chapter-reading[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.chapter-reading[open] > summary {
+  border-bottom: 1px solid rgba(0, 0, 220, 0.15);
+  border-radius: 6px 6px 0 0;
+}
+
+.chapter-reading > *:not(summary) {
+  padding: 0 1.2rem;
+}
+
+/* ---------- Socrative Quiz Buttons ---------- */
+
+.socrative-box {
+  border: 2px solid var(--flame-red);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+  background: rgba(240, 25, 40, 0.04);
+  text-align: center;
+}
+
+.socrative-box a.socrative-btn {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  background: var(--flame-red);
+  color: white !important;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.socrative-box a.socrative-btn:hover {
+  background: #c01420;
+  transform: translateY(-1px);
+}
+
+/* ---------- Tables ---------- */
+
+.md-typeset table:not([class]) th {
+  background-color: var(--flame-red);
+  color: white;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background-color: rgba(240, 25, 40, 0.25);
+  color: var(--md-default-fg-color);
+}
+
+/* ---------- Quiz Admonition — Purple ---------- */
+
+.md-typeset .admonition.quiz,
+.md-typeset details.quiz {
+  border-color: #7B1FA2;
+}
+.md-typeset .quiz > .admonition-title,
+.md-typeset .quiz > summary {
+  background-color: rgba(123, 31, 162, 0.1);
+  border-color: #7B1FA2;
+}
+.md-typeset .quiz > .admonition-title::before,
+.md-typeset .quiz > summary::before {
+  background-color: #7B1FA2;
+  -webkit-mask-image: var(--md-admonition-icon--question);
+  mask-image: var(--md-admonition-icon--question);
+}
+
+/* ---------- Exam Format Tab Highlight ---------- */
+
+.md-tabs__link[href="./exam-format/"],
+.md-tabs__link[href="../exam-format/"],
+.md-tabs__link[href="exam-format/"] {
+  background: var(--flame-blue) !important;
+  color: white !important;
+  border-radius: 4px;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+}
+
+.md-nav__link[href="exam-format/"],
+.md-nav__link[href="./exam-format/"],
+.md-nav__link[href="../exam-format/"] {
+  color: var(--flame-blue) !important;
+  font-weight: 700;
+}
+
+/* ---------- Slide Placeholder ---------- */
+
+.slide-placeholder {
+  border: 2px dashed var(--flame-blue);
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background: rgba(0, 0, 220, 0.04);
+  color: var(--flame-blue-deep);
+  margin: 1rem 0;
+}
+
+.slide-placeholder .placeholder-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.slide-placeholder p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+/* ---------- Concept Map Container ---------- */
+
+.concept-map {
+  border: 2px solid var(--flame-blue);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  background: rgba(0, 0, 220, 0.02);
+}
+
+.concept-map .mermaid {
+  text-align: center;
+}
+
+/* ---------- Self-check Quiz Cards ---------- */
+
+.quiz-section details.quiz {
+  margin-bottom: 1rem;
+}
+
+.quiz-section .upper-alpha ol {
+  list-style-type: upper-alpha;
+}
+
+.quiz-intro {
+  background: rgba(123, 31, 162, 0.06);
+  border-left: 4px solid #7B1FA2;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+}
