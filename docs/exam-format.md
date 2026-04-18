@@ -2,7 +2,8 @@
 title: "Exam Format: End Term Pattern"
 description: "Structure and format of the ECON207 end-term examination"
 ---
-
+#
+**Economics does NOT lend itself to pulling all-nighters before exams**
 # Exam Format: End Term Pattern
 
 **Total Marks: 75** | **4 Sections (A–D)** | **Syllabus: Ch 2, 5, 6, 9, 12**
